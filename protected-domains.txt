@@ -1,0 +1,37 @@
+# Build-time checks only: these exact hostnames must not match a block rule.
+# A rule equal to a name below, or on its parent, stops the build before writes.
+# This is not a resolver allowlist and does not protect every sibling/subdomain.
+# Yahoo pages, login, mail, and shared content infrastructure.
+yahoo.com
+mail.yahoo.com
+login.yahoo.com
+api.login.yahoo.com
+finance.yahoo.com
+news.yahoo.com
+search.yahoo.com
+sports.yahoo.com
+yahoo.net
+yahooinc.com
+yahoodns.net
+yimg.com
+s.yimg.com
+# AdGuard explicitly excludes this Yahoo endpoint from DNS-wide blocking.
+udc.yahoo.com
+oath.com
+aol.com
+# Digital Turbine corporate information and documentation are not ad delivery.
+digitalturbine.com
+docs.digitalturbine.com
+# Previously requested exceptions and sites affected by IP-list enforcement.
+cdn.cookielaw.org
+mobile-data.onetrust.io
+ui.com
+example.com
+idm.xfinity.com
+# Feed distribution must remain reachable.
+github.com
+raw.githubusercontent.com
+# Do not turn an ad-blocking software vendor's website into an ad-server block.
+totaladblock.com
+admin.dable.io
+proto2ad.durasite.net

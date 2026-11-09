@@ -154,6 +154,50 @@ class UpdateTests(unittest.TestCase):
             self.assertEqual(process.returncode, 0, errors)
         self.assertTrue({"first.example.com", "second.example.com"} <= self.domains())
 
+    def test_protected_names_reject_parents_but_allow_ad_siblings(self):
+        update.require_protected_names({"ads.yahoo.com"}, {"yahoo.com", "mail.yahoo.com"})
+        for blocked in ({"yahoo.com"}, {"mail.yahoo.com"}):
+            with self.subTest(blocked=blocked), self.assertRaisesRegex(ValueError, "Protected-domain"):
+                update.require_protected_names(blocked, {"mail.yahoo.com"})
+        update.require_protected_names({"notyahoo.com"}, {"yahoo.com"})
+
+    def test_protected_collision_in_source_or_history_preserves_outputs(self):
+        self.bootstrap()
+        self.config["protected_domains"] = "protected.txt"
+        (self.root / "protected.txt").write_text("login.example.com\n")
+        self.save_config()
+        before = {name: (self.root / name).read_bytes() for name in ("blocklist.txt", "report.json")}
+        self.source.write_text("example.com\n")
+        with self.assertRaisesRegex(ValueError, "Protected-domain"):
+            self.run_build()
+        for name, content in before.items():
+            self.assertEqual((self.root / name).read_bytes(), content)
+        self.source.write_text("new.example.com\n")
+        (self.root / "protected.txt").write_text("old.example.com\n")
+        with self.assertRaisesRegex(ValueError, "Protected-domain"):
+            self.run_build()
+        self.args.check = True
+        with self.assertRaisesRegex(ValueError, "Protected-domain"):
+            self.run_build()
+
+    def test_adblock_output_has_suffix_rules_and_detects_tampering(self):
+        self.config["adblock_output"] = "adblock.txt"
+        self.save_config()
+        self.bootstrap()
+        adblock = self.root / "adblock.txt"
+        self.assertEqual(adblock.read_text(), "||ads.example.com^\n||old.example.com^\n")
+        self.args.check = True
+        self.run_build()
+        adblock.write_text("||example.com^\n")
+        with self.assertRaisesRegex(ValueError, "Adblock output"):
+            self.run_build()
+
+    def test_adblock_output_cannot_overwrite_canonical_list(self):
+        self.config["adblock_output"] = "blocklist.txt"
+        self.save_config()
+        with self.assertRaisesRegex(ValueError, "paths must differ"):
+            self.run_build()
+
 
 if __name__ == "__main__":
     unittest.main()

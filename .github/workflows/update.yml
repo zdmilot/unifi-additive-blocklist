@@ -30,6 +30,7 @@ jobs:
           name: unifi-additive-blocklist
           path: |
             blocklist.txt
+            blocklist-adblock.txt
             build-report.json
             SOURCES.md
             LICENSE
@@ -37,7 +38,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add blocklist.txt build-report.json
+          git add blocklist.txt blocklist-adblock.txt build-report.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update additive blocklist (retain all prior domains)'
             git push origin HEAD:main

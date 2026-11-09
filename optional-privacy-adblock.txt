@@ -1,0 +1,10 @@
+! Optional only. NOT merged into either main feed or enabled automatically.
+! These six Safari-test hosts are in HaGeZi PRO, not NORMAL.
+! They include error reporting, its web interfaces, and app analytics.
+! Load separately only if you want this additional privacy restriction.
+||api.bugsnag.com^
+||app.bugsnag.com^
+||app.getsentry.com^
+||appmetrica.yandex.ru^
+||browser.sentry-cdn.com^
+||metrika.yandex.ru^

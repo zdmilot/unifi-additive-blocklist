@@ -1,0 +1,840 @@
+{
+  "reviewed_at": "2026-11-09T06:16:03.627391+00:00",
+  "scope": "Snapshot membership audit; not a live resolver test or a guarantee of zero false positives. Simple domain rules only; browser contextual/path/exception rules are not converted or evaluated.",
+  "baseline_domains": 88382,
+  "total_domains": 207310,
+  "added_domains": 118928,
+  "removed_domains": 0,
+  "historical_light_names_not_in_normal": 552,
+  "safari_test": {
+    "domain_failures": 25,
+    "main_feed_covered": 19,
+    "optional_privacy": 6,
+    "other_failed_tests": [
+      "Static Ad",
+      "Dynamic Ad",
+      "ads.js",
+      "pagead.js"
+    ]
+  },
+  "sources": [
+    {
+      "name": "hagezi-light",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/light-onlydomains.txt",
+      "sha256": "8cf07f8a21f34d3b47f08e2140d70d21eeb1bb9037a26c30b6025fb044fe1f3e",
+      "bytes": 1893209
+    },
+    {
+      "name": "hagezi-normal",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/multi-onlydomains.txt",
+      "sha256": "b4142a8f9cc81ad77ebe7d765f1a9f10fe3f409bb85d23c60d395cf7b686e77d",
+      "bytes": 4196207
+    },
+    {
+      "name": "hagezi-pro",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt",
+      "sha256": "dbdf10e0d5a4513e4e71f93de58e534be76669109842ac31abbb3dc908f79db4",
+      "bytes": 4445921
+    },
+    {
+      "name": "hagezi-ultimate",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/ultimate-onlydomains.txt",
+      "sha256": "69805efb210caffbe96f31a8ae1044ecabca9bc0005b6a4bcbbe6076adf806cc",
+      "bytes": 5177354
+    },
+    {
+      "name": "adguard-dns",
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "sha256": "7f3694e628209d9d38427ac23a0d94d9840153da5323206e105be2b3af08a41c",
+      "bytes": 4596443
+    },
+    {
+      "name": "adguard-exceptions",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exceptions.txt",
+      "sha256": "837a62c35c9c41f48e5c23ce95a251a08483ece817048a6b4038a812a0702e10",
+      "bytes": 19080
+    },
+    {
+      "name": "adguard-exclusions",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/master/Filters/exclusions.txt",
+      "sha256": "7554ea0743a448ea1922a3137b24214b241f4131c26a8642a1ad7b231889ceaf",
+      "bytes": 40650
+    },
+    {
+      "name": "oisd-big",
+      "url": "https://big.oisd.nl/",
+      "sha256": "c7d79d3fbeb2019dd366a249ce7bf4a64dc2be6a60c10ed2d528663728cfbad5",
+      "bytes": 5236219
+    },
+    {
+      "name": "peter-lowe",
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext",
+      "sha256": "b4a5966d889e5ffb2c05f76ff6ae32615a862df305241a035a497b1989dfe447",
+      "bytes": 95236
+    },
+    {
+      "name": "easylist",
+      "url": "https://raw.githubusercontent.com/easylist/easylist/master/easylist/easylist_adservers.txt",
+      "sha256": "4c9bd3671eb690683389c1a01fb7eb02f5d7da87377df0739902e7084b2201ff",
+      "bytes": 929859
+    },
+    {
+      "name": "easyprivacy",
+      "url": "https://raw.githubusercontent.com/easylist/easylist/master/easyprivacy/easyprivacy_trackingservers.txt",
+      "sha256": "df240b596ceb5833287704cfe455d047ffd2a09804ac82782e077e17c1b55fec",
+      "bytes": 1267
+    }
+  ],
+  "reviewed_domains": [
+    {
+      "domain": "api.bugsnag.com",
+      "main_feed_rule": null,
+      "decision": "optional-privacy",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": "bugsnag.com",
+        "hagezi-ultimate": "bugsnag.com",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "api.bugsnag.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "api.luckyorange.com",
+      "main_feed_rule": "api.luckyorange.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "luckyorange.com",
+        "hagezi-normal": "luckyorange.com",
+        "hagezi-pro": "luckyorange.com",
+        "hagezi-ultimate": "luckyorange.com",
+        "peter-lowe": "luckyorange.com",
+        "adguard-dns": "luckyorange.com",
+        "oisd-big": "luckyorange.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "api.mouseflow.com",
+      "main_feed_rule": "api.mouseflow.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "mouseflow.com",
+        "hagezi-normal": "mouseflow.com",
+        "hagezi-pro": "mouseflow.com",
+        "hagezi-ultimate": "mouseflow.com",
+        "peter-lowe": null,
+        "adguard-dns": "mouseflow.com",
+        "oisd-big": "mouseflow.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "app.bugsnag.com",
+      "main_feed_rule": null,
+      "decision": "optional-privacy",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": "bugsnag.com",
+        "hagezi-ultimate": "bugsnag.com",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "app.bugsnag.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "app.getsentry.com",
+      "main_feed_rule": null,
+      "decision": "optional-privacy",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": "app.getsentry.com",
+        "hagezi-ultimate": "app.getsentry.com",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "app.getsentry.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "appmetrica.yandex.ru",
+      "main_feed_rule": null,
+      "decision": "optional-privacy",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": "appmetrica.yandex.ru",
+        "hagezi-ultimate": "appmetrica.yandex.ru",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "appmetrica.yandex.ru",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "browser.sentry-cdn.com",
+      "main_feed_rule": null,
+      "decision": "optional-privacy",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": "sentry-cdn.com",
+        "hagezi-ultimate": "sentry-cdn.com",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": null,
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "business-api.tiktok.com",
+      "main_feed_rule": "business-api.tiktok.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": "business-api.tiktok.com",
+        "hagezi-pro": "business-api.tiktok.com",
+        "hagezi-ultimate": "business-api.tiktok.com",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "business-api.tiktok.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "cdn.luckyorange.com",
+      "main_feed_rule": "cdn.luckyorange.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "luckyorange.com",
+        "hagezi-normal": "luckyorange.com",
+        "hagezi-pro": "luckyorange.com",
+        "hagezi-ultimate": "luckyorange.com",
+        "peter-lowe": "luckyorange.com",
+        "adguard-dns": "luckyorange.com",
+        "oisd-big": "luckyorange.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "claritybt.freshmarketer.com",
+      "main_feed_rule": "claritybt.freshmarketer.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "freshmarketer.com",
+        "hagezi-normal": "freshmarketer.com",
+        "hagezi-pro": "freshmarketer.com",
+        "hagezi-ultimate": "freshmarketer.com",
+        "peter-lowe": null,
+        "adguard-dns": "freshmarketer.com",
+        "oisd-big": "freshmarketer.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "data.mistat.india.xiaomi.com",
+      "main_feed_rule": "data.mistat.india.xiaomi.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "mistat.india.xiaomi.com",
+        "hagezi-normal": "mistat.india.xiaomi.com",
+        "hagezi-pro": "mistat.india.xiaomi.com",
+        "hagezi-ultimate": "mistat.india.xiaomi.com",
+        "peter-lowe": null,
+        "adguard-dns": "data.mistat.india.xiaomi.com",
+        "oisd-big": "data.mistat.india.xiaomi.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "data.mistat.rus.xiaomi.com",
+      "main_feed_rule": "data.mistat.rus.xiaomi.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "mistat.rus.xiaomi.com",
+        "hagezi-normal": "mistat.rus.xiaomi.com",
+        "hagezi-pro": "mistat.rus.xiaomi.com",
+        "hagezi-ultimate": "mistat.rus.xiaomi.com",
+        "peter-lowe": null,
+        "adguard-dns": "data.mistat.rus.xiaomi.com",
+        "oisd-big": "data.mistat.rus.xiaomi.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "events.reddit.com",
+      "main_feed_rule": "events.reddit.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "events.reddit.com",
+        "hagezi-normal": "events.reddit.com",
+        "hagezi-pro": "events.reddit.com",
+        "hagezi-ultimate": "events.reddit.com",
+        "peter-lowe": null,
+        "adguard-dns": "events.reddit.com",
+        "oisd-big": "events.reddit.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "fwtracks.freshmarketer.com",
+      "main_feed_rule": "fwtracks.freshmarketer.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "freshmarketer.com",
+        "hagezi-normal": "freshmarketer.com",
+        "hagezi-pro": "freshmarketer.com",
+        "hagezi-ultimate": "freshmarketer.com",
+        "peter-lowe": null,
+        "adguard-dns": "freshmarketer.com",
+        "oisd-big": "freshmarketer.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "identify.hotjar.com",
+      "main_feed_rule": "identify.hotjar.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "hotjar.com",
+        "hagezi-normal": "hotjar.com",
+        "hagezi-pro": "hotjar.com",
+        "hagezi-ultimate": "hotjar.com",
+        "peter-lowe": "hotjar.com",
+        "adguard-dns": "hotjar.com",
+        "oisd-big": "identify.hotjar.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "insights.hotjar.com",
+      "main_feed_rule": "insights.hotjar.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "hotjar.com",
+        "hagezi-normal": "hotjar.com",
+        "hagezi-pro": "hotjar.com",
+        "hagezi-ultimate": "hotjar.com",
+        "peter-lowe": "hotjar.com",
+        "adguard-dns": "hotjar.com",
+        "oisd-big": "insights.hotjar.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "log.fc.yahoo.com",
+      "main_feed_rule": "log.fc.yahoo.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "log.fc.yahoo.com",
+        "hagezi-normal": "log.fc.yahoo.com",
+        "hagezi-pro": "log.fc.yahoo.com",
+        "hagezi-ultimate": "fc.yahoo.com",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "log.fc.yahoo.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "metrika.yandex.ru",
+      "main_feed_rule": null,
+      "decision": "optional-privacy",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": "metrika.yandex.ru",
+        "hagezi-ultimate": "metrika.yandex.ru",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "metrika.yandex.ru",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "realtime.luckyorange.com",
+      "main_feed_rule": "realtime.luckyorange.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "luckyorange.com",
+        "hagezi-normal": "luckyorange.com",
+        "hagezi-pro": "luckyorange.com",
+        "hagezi-ultimate": "luckyorange.com",
+        "peter-lowe": "luckyorange.com",
+        "adguard-dns": "luckyorange.com",
+        "oisd-big": "luckyorange.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "samsung-com.112.2o7.net",
+      "main_feed_rule": "samsung-com.112.2o7.net",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "samsung-com.112.2o7.net",
+        "hagezi-normal": "samsung-com.112.2o7.net",
+        "hagezi-pro": "samsung-com.112.2o7.net",
+        "hagezi-ultimate": "2o7.net",
+        "peter-lowe": "2o7.net",
+        "adguard-dns": "2o7.net",
+        "oisd-big": "samsung-com.112.2o7.net",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "surveys.hotjar.com",
+      "main_feed_rule": "surveys.hotjar.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "hotjar.com",
+        "hagezi-normal": "hotjar.com",
+        "hagezi-pro": "hotjar.com",
+        "hagezi-ultimate": "hotjar.com",
+        "peter-lowe": "hotjar.com",
+        "adguard-dns": "hotjar.com",
+        "oisd-big": "surveys.hotjar.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "tools.mouseflow.com",
+      "main_feed_rule": "tools.mouseflow.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "mouseflow.com",
+        "hagezi-normal": "mouseflow.com",
+        "hagezi-pro": "mouseflow.com",
+        "hagezi-ultimate": "mouseflow.com",
+        "peter-lowe": null,
+        "adguard-dns": "mouseflow.com",
+        "oisd-big": "mouseflow.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "udcm.yahoo.com",
+      "main_feed_rule": "udcm.yahoo.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "udcm.yahoo.com",
+        "hagezi-normal": "udcm.yahoo.com",
+        "hagezi-pro": "udcm.yahoo.com",
+        "hagezi-ultimate": "udcm.yahoo.com",
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": "udcm.yahoo.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "w1.luckyorange.com",
+      "main_feed_rule": "w1.luckyorange.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "luckyorange.com",
+        "hagezi-normal": "luckyorange.com",
+        "hagezi-pro": "luckyorange.com",
+        "hagezi-ultimate": "luckyorange.com",
+        "peter-lowe": "luckyorange.com",
+        "adguard-dns": "luckyorange.com",
+        "oisd-big": "luckyorange.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "weather-analytics-events.apple.com",
+      "main_feed_rule": "weather-analytics-events.apple.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": "weather-analytics-events.apple.com",
+        "hagezi-normal": "weather-analytics-events.apple.com",
+        "hagezi-pro": "weather-analytics-events.apple.com",
+        "hagezi-ultimate": "weather-analytics-events.apple.com",
+        "peter-lowe": null,
+        "adguard-dns": "weather-analytics-events.apple.com",
+        "oisd-big": "weather-analytics-events.apple.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "ballybet.com",
+      "main_feed_rule": "ballybet.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": null,
+        "hagezi-ultimate": null,
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": null,
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "play.ballybet.com",
+      "main_feed_rule": "play.ballybet.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": null,
+        "hagezi-ultimate": null,
+        "peter-lowe": null,
+        "adguard-dns": null,
+        "oisd-big": null,
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "3p-udc.yahoo.com",
+      "main_feed_rule": "3p-udc.yahoo.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": "3p-udc.yahoo.com",
+        "hagezi-ultimate": "3p-udc.yahoo.com",
+        "peter-lowe": null,
+        "adguard-dns": "3p-udc.yahoo.com",
+        "oisd-big": "3p-udc.yahoo.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    },
+    {
+      "domain": "bats.video.yahoo.com",
+      "main_feed_rule": "bats.video.yahoo.com",
+      "decision": "main",
+      "source_parent_matches": {
+        "hagezi-light": null,
+        "hagezi-normal": null,
+        "hagezi-pro": null,
+        "hagezi-ultimate": null,
+        "peter-lowe": null,
+        "adguard-dns": "bats.video.yahoo.com",
+        "oisd-big": "bats.video.yahoo.com",
+        "easylist": null,
+        "easyprivacy": null
+      }
+    }
+  ],
+  "family_domain_counts": {
+    "digital-turbine": 38,
+    "yahoo": 48
+  },
+  "family_domains_in_main_feed": {
+    "digital-turbine": [
+      "adcolony.com",
+      "clientapi-amer1.dtignite.com",
+      "clientapi-amx.dtignite.com",
+      "clientapi-aone.dtignite.com",
+      "clientapi-attmex.dtignite.com",
+      "clientapi-blu.dtignite.com",
+      "clientapi-globe.dtignite.com",
+      "clientapi-motorola.dtignite.com",
+      "clientapi-onestore-cf.dtignite.com",
+      "clientapi-pwg.dtignite.com",
+      "clientapi-samsung.dtignite.com",
+      "clientapi-telefonica.dtignite.com",
+      "clientapi-tim.dtignite.com",
+      "clientapi-tmobile.dtignite.com",
+      "clientapi-tracfone.dtignite.com",
+      "download-amer1.dtignite.com",
+      "download-amx.dtignite.com",
+      "download-att.dtignite.com",
+      "download-attmex.dtignite.com",
+      "download-blu.dtignite.com",
+      "download-cricket.dtignite.com",
+      "download-globe.dtignite.com",
+      "download-ignite.dtignite.com",
+      "download-ignitedelivers.dtignite.com",
+      "download-millicom.dtignite.com",
+      "download-motorola.dtignite.com",
+      "download-pwg.dtignite.com",
+      "download-samsung.dtignite.com",
+      "download-telefonica.dtignite.com",
+      "download-tim.dtignite.com",
+      "download-tracfone.dtignite.com",
+      "download-uscellular.dtignite.com",
+      "download-verizon.dtignite.com",
+      "fyber.com",
+      "inner-active.com",
+      "inner-active.mobi",
+      "sponsorpay.com",
+      "tpbid.com"
+    ],
+    "yahoo": [
+      "360.yahoo.com",
+      "3p-geo.yahoo.com",
+      "3p-udc.yahoo.com",
+      "admarketing.yahoo.net",
+      "ads.auctions.yahoo.com",
+      "ads.finance.yahoo.com",
+      "ads.yahoo.com",
+      "ads.yimg.com",
+      "adserver.adtechus.com",
+      "adserver.yahoo.com",
+      "adspecs.yahoo.com",
+      "adtech.de",
+      "adtech.yahooinc.com",
+      "advertising.yahoo.com",
+      "advertising.yahooinc.com",
+      "analytics-455007615.collector.yahoo.net",
+      "analytics.query.yahoo.com",
+      "analytics.yahoo.com",
+      "bats.video.yahoo.com",
+      "beap-bc.yahoo.com",
+      "c2shb.pubgw.yahoo.com",
+      "c2shb.ssp.yahoo.com",
+      "cookiex.ngd.yahoo.com",
+      "ec.yimg.com",
+      "edgecast-vod.yimg.com",
+      "ganon.yahoo.com",
+      "gemini.yahoo.com",
+      "geo.query.yahoo.com",
+      "geo.yahoo.com",
+      "jill.fc.yahoo.com",
+      "log.fc.yahoo.com",
+      "marketingsolutions.yahoo.com",
+      "noa.yahoo.com",
+      "nol.yahoo.com",
+      "partnerads.ysm.yahoo.com",
+      "pbd.yahoo.com",
+      "pbs.yahoo.com",
+      "pclick.yahoo.com",
+      "pixel.advertising.com",
+      "pn.ybp.yahoo.com",
+      "pr-bh.ybp.yahoo.com",
+      "ras.yahoo.com",
+      "readmo.yahoo.com",
+      "richmedia.yimg.com",
+      "udcm.yahoo.com",
+      "us.a1.yimg.com",
+      "us.js2.yimg.com",
+      "webc2s.pubgw.yahoo.com"
+    ]
+  },
+  "protected_names_checked": [
+    "admin.dable.io",
+    "aol.com",
+    "api.login.yahoo.com",
+    "cdn.cookielaw.org",
+    "digitalturbine.com",
+    "docs.digitalturbine.com",
+    "example.com",
+    "finance.yahoo.com",
+    "github.com",
+    "idm.xfinity.com",
+    "login.yahoo.com",
+    "mail.yahoo.com",
+    "mobile-data.onetrust.io",
+    "news.yahoo.com",
+    "oath.com",
+    "proto2ad.durasite.net",
+    "raw.githubusercontent.com",
+    "s.yimg.com",
+    "search.yahoo.com",
+    "sports.yahoo.com",
+    "totaladblock.com",
+    "udc.yahoo.com",
+    "ui.com",
+    "yahoo.com",
+    "yahoo.net",
+    "yahoodns.net",
+    "yahooinc.com",
+    "yimg.com"
+  ],
+  "withheld_broad_rules": [
+    "yahoo.com",
+    "yimg.com",
+    "s.yimg.com",
+    "yahoo.net",
+    "yahooinc.com",
+    "yahoodns.net",
+    "digitalturbine.com",
+    "dtignite.com"
+  ],
+  "not_runtime_tested": [
+    "UniFi DNS import and wildcard behavior",
+    "active resolver query logs",
+    "Safari blocking after deployment",
+    "Yahoo Mail login, inbox, attachments, images and videos",
+    "DT-powered rewarded ads and app installation workflows"
+  ],
+  "comparison_disagreements": [
+    {
+      "comparison": "adguard-exclusions",
+      "hostname": "24smi.info",
+      "covering_rule": "24smi.info",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exclusions",
+      "hostname": "api.amplitude.com",
+      "covering_rule": "api.amplitude.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exclusions",
+      "hostname": "csm.cxpublic.com",
+      "covering_rule": "cxpublic.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exclusions",
+      "hostname": "cxpublic.com",
+      "covering_rule": "cxpublic.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exclusions",
+      "hostname": "etracker.com",
+      "covering_rule": "etracker.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exclusions",
+      "hostname": "telemetry.mozilla.org",
+      "covering_rule": "telemetry.mozilla.org",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exclusions",
+      "hostname": "xiti.com",
+      "covering_rule": "xiti.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "5471782.fls.doubleclick.net",
+      "covering_rule": "fls.doubleclick.net",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "analytics.amplitude.com",
+      "covering_rule": "analytics.amplitude.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "content.viralize.tv",
+      "covering_rule": "viralize.tv",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "id.i2i.jp",
+      "covering_rule": "i2i.jp",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "my.tealiumiq.com",
+      "covering_rule": "tealiumiq.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "nineto5mac-d.openx.net",
+      "covering_rule": "openx.net",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "r.sascdn.com",
+      "covering_rule": "r.sascdn.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "radiofrance.targetspot.com",
+      "covering_rule": "targetspot.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "res.ads.nicovideo.jp",
+      "covering_rule": "ads.nicovideo.jp",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "sponsor.nitropay.com",
+      "covering_rule": "nitropay.com",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    },
+    {
+      "comparison": "adguard-exceptions",
+      "hostname": "tags.crwdcntrl.net",
+      "covering_rule": "tags.crwdcntrl.net",
+      "historical": true,
+      "assessment": "Publisher disagreement, not a confirmed false positive in this household; no automatic allow applied."
+    }
+  ],
+  "withheld_new_names": [
+    {
+      "domain": "totaladblock.com",
+      "reason": "AdGuard DNS exclusions states this website is not used to show ads. Excluded before first publication and protected against future reintroduction."
+    },
+    {
+      "domain": "admin.dable.io",
+      "reason": "AdGuard DNS direct hostname exception. Excluded before first publication and protected against a future parent block."
+    },
+    {
+      "domain": "proto2ad.durasite.net",
+      "reason": "AdGuard DNS direct hostname exception. Excluded before first publication and protected against a future parent block."
+    }
+  ],
+  "comparison_exception_limit": "Direct hostname/parent matches only. CNAME targets, site-context exceptions and complex modifiers require resolver/browser testing and are not certified by this audit."
+}

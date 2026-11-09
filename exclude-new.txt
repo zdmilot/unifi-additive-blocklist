@@ -4,3 +4,9 @@
 # Use literal hostnames; the dots are not regular-expression escapes.
 cdn.cookielaw.org
 mobile-data.onetrust.io
+# AdGuard DNS exclusions identifies this vendor website as not serving ads.
+# Reviewed before the NORMAL expansion was published; see COVERAGE-REVIEW.md.
+totaladblock.com
+# AdGuard DNS explicitly allows these administrative/compatibility endpoints.
+admin.dable.io
+proto2ad.durasite.net

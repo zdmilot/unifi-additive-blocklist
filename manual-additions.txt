@@ -1,2 +1,34 @@
 # Extra domains to add permanently, one domain per line.
 # Removing a line later will NOT remove it from blocklist.txt.
+# See COVERAGE-REVIEW.md and coverage-review.json for evidence and scope.
+
+# User-requested Bally Bet site block: intentional gambling-site restriction.
+# The Adblock output covers the root and every subdomain, including play.
+ballybet.com
+play.ballybet.com
+
+# Yahoo endpoints present in both AdGuard DNS and OISD, missing from NORMAL.
+3p-udc.yahoo.com
+bats.video.yahoo.com
+
+# Safari test hosts already supported by LIGHT/NORMAL, often via parent rules.
+# Exact entries also make these particular hosts available to exact-only tools.
+api.luckyorange.com
+api.mouseflow.com
+business-api.tiktok.com
+cdn.luckyorange.com
+claritybt.freshmarketer.com
+data.mistat.india.xiaomi.com
+data.mistat.rus.xiaomi.com
+events.reddit.com
+fwtracks.freshmarketer.com
+identify.hotjar.com
+insights.hotjar.com
+log.fc.yahoo.com
+realtime.luckyorange.com
+samsung-com.112.2o7.net
+surveys.hotjar.com
+tools.mouseflow.com
+udcm.yahoo.com
+w1.luckyorange.com
+weather-analytics-events.apple.com

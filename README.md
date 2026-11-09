@@ -13,10 +13,14 @@ firmware, DNS configuration, built-in lists, or existing policies.
 ## Files you can use
 
 - [`blocklist.txt`](blocklist.txt): sorted, unique domains, one per line, served as the subscription feed.
+- [`blocklist-adblock.txt`](blocklist-adblock.txt): the same set as explicit `||domain^` rules; recommended for AdGuard Home and Pi-hole v6+ so parent entries also block subdomains.
 - [`build-report.json`](build-report.json): source hashes, counts, additions, and output checksum.
 - [`sources.json`](sources.json): upstream list and validation limits.
 - [`manual-additions.txt`](manual-additions.txt): your extra domains.
 - [`exclude-new.txt`](exclude-new.txt): exact names to exclude before their first addition.
+- [`protected-domains.txt`](protected-domains.txt): named service hosts that must not match a block rule; a collision aborts a build, including if it is historical.
+- [`COVERAGE-REVIEW.md`](COVERAGE-REVIEW.md): Yahoo/Digital Turbine review, Bally Bet scope, Safari-test findings, and validation limits.
+- [`optional-privacy-adblock.txt`](optional-privacy-adblock.txt): six optional error-reporting/app-analytics rules; not included in either main feed.
 
 The user-requested exceptions `cdn.cookielaw.org` and `mobile-data.onetrust.io`
 are excluded from new upstream/manual additions. Neither was in the initial
@@ -24,14 +28,21 @@ historical feed. Add these literal hostnames to the applicable UniFi allowlist
 as well to override built-in or other filtering lists; `cdn.cookielaw\\.org`
 is regex notation and should not be pasted into a hostname-only field.
 
-The starting source is [HaGeZi Multi LIGHT](https://github.com/hagezi/dns-blocklists#light),
-which supplies ad/tracker domains. Its current snapshot is included in the generated
-list. Historical domains remain even if HaGeZi removes or reclassifies them later.
+The maintained source is [HaGeZi Multi NORMAL](https://github.com/hagezi/dns-blocklists#normal),
+selected for broader coverage with a lower risk of breakage than PRO/PRO++/ULTIMATE.
+The historical LIGHT snapshot is retained. Historical domains remain even if HaGeZi
+removes or reclassifies them later; the list is not guaranteed free of false positives.
 Source attribution and licensing are in [SOURCES.md](SOURCES.md).
 
 ## Subscription URL and UniFi limitation
 
-The repository and list are public. Use this stable, anonymous HTTPS feed URL:
+The repository and lists are public. For AdGuard Home or Pi-hole v6+, use:
+
+```text
+https://raw.githubusercontent.com/zdmilot/unifi-additive-blocklist/main/blocklist-adblock.txt
+```
+
+For a resolver that explicitly supports suffix matching of plain domain feeds, use:
 
 ```text
 https://raw.githubusercontent.com/zdmilot/unifi-additive-blocklist/main/blocklist.txt
@@ -45,16 +56,26 @@ subscription for the DNS Content Filter. The DNS Content Filter does not accept
 a blocklist URL in the inspected Network 11.0.99 UI. See the
 [UniFi integration guide's domain-filtering limitation](https://qfeeds.com/knowledge-base/unifi-setup/#malicious-domains).
 
-For URL-based, domain-specific blocking, add the feed URL to a DNS filter such as
+For URL-based, domain-specific blocking, add the appropriate feed URL to a DNS filter such as
 Pi-hole, AdGuard Home, or Technitium, verify the full imported count against
 `build-report.json`, and configure the intended clients/gateway to use that DNS
 filter. Keep the existing UniFi ad-block settings and requested allowlist entries.
+Bare domains are exact-only in AdGuard Home; do not assume a plain-domain import
+blocks unknown subdomains. The Adblock variant explicitly covers a domain and all
+its subdomains. In particular `||ballybet.com^` covers `play.ballybet.com` and other
+Bally Bet hosts without blocking the unrelated parent brand `ballys.com`.
+Do not paste `*.ballybet.com` into this project's domain-only source files, or paste
+Adblock rules into a UniFi hostname-only field. UniFi's documented custom Content
+Filter accepts domains, but its subdomain behavior needs verification on your
+firmware; the documentation's DNS-forwarding wildcard example is not proof of
+Content Filter matching semantics.
+
 The resolver host and DNS routing must be selected before deploying that approach;
 this repository does not install a resolver or alter DNS routing automatically.
 
-Use the raw file URL, not this repository's HTML page. It serves plain UTF-8 text
-with one domain per line; no token, login, wildcard conversion, or file import is
-needed. GitHub Actions maintains the feed daily; the subscribing DNS filter polls
+Use a raw file URL, not this repository's HTML page. Both serve plain UTF-8 text,
+one domain or rule per line, with no token or login needed.
+GitHub Actions maintains both feeds daily; the subscribing DNS filter polls
 it on its configured schedule. Do not paste the feed URL into a field expecting
 an individual blocked domain. Delivery uses a URL subscription, not a router-side
 script or a one-time file import. Publishing on GitHub Pages would not change
@@ -136,7 +157,7 @@ Required-source failure, invalid syntax, a suspiciously small source, or exceedi
 the configured maximum stops the update before any output changes. Sources accept
 domain-only and sinkhole hosts formats; wildcard/Adblock rules are rejected.
 Updates use a process lock and an atomic replacement of the canonical list. A crash
-between the list and report writes can leave a stale report; `--check` detects it,
+between generated-file writes can leave a stale derivative or report; `--check` detects it,
 and a successful rerun repairs it without dropping domains. Keep Git history and
 backups: deliberate file edits or force pushes can bypass the updater's guarantees.
 
