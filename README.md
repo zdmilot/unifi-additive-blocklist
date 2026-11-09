@@ -45,7 +45,8 @@ Publishing the feed on GitHub Pages does not change that version requirement.
 
 1. Open **Network Lists** in UniFi Settings and create a domain list named
    `UniFi Additive Blocklist`.
-2. Select **External** as its source and enter the HTTPS feed URL above.
+2. Select **Dynamic** as its source (called External Network Lists in the release
+   notes) and enter the HTTPS feed URL above. Set its refresh interval to 24 hours.
 3. Refresh the list and verify successful retrieval and the full domain count
    against `build-report.json`. Capacity and refresh controls depend on the device
    and firmware. Never truncate history silently to fit a capacity limit.
@@ -73,6 +74,21 @@ and may take up to 20 minutes. Back up the configuration and review the offered
 device-specific upgrade before proceeding. This repository does not upgrade the
 gateway automatically. No URL subscription is claimed active until its retrieval
 and blocking policy are verified on the gateway.
+
+### Configured separate blocker
+
+On November 9, 2026, UniFi Network 11.0.99 successfully loaded all 88,382 domains
+into the dynamic **UniFi Additive Blocklist** network list, with a 24-hour refresh
+interval. The separate **UniFi Additive Content Blocker** firewall policy references
+that domain list, blocks Default-network traffic from Internal to External,
+covers IPv4 and IPv6, and runs Always with flow logging enabled. Find the list in
+**Settings → Networks → Network Lists**, and its enforcement rule in
+**Settings → Policy Engine → Policy Table**. The native subscription is enforced
+through that separate policy, not a pasted static Content Filter blocklist.
+
+The original **AD Blocking Filter** remains in place, including the CookieLaw and
+OneTrust allowlist entries. The two exception domains and their parents are absent
+from the published supplemental feed.
 
 ## Update locally
 
