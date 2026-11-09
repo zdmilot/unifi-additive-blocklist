@@ -1,2 +1,6 @@
 # Exact domains to exclude BEFORE their first addition, one domain per line.
 # This never removes a domain already in blocklist.txt.
+# Permanent user-requested exclusions, added 2026-11-09.
+# Use literal hostnames; the dots are not regular-expression escapes.
+cdn.cookielaw.org
+mobile-data.onetrust.io

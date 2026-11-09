@@ -18,6 +18,12 @@ firmware, DNS configuration, built-in lists, or existing policies.
 - [`manual-additions.txt`](manual-additions.txt): your extra domains.
 - [`exclude-new.txt`](exclude-new.txt): exact names to exclude before their first addition.
 
+The user-requested exceptions `cdn.cookielaw.org` and `mobile-data.onetrust.io`
+are excluded from new upstream/manual additions. Neither was in the initial
+historical feed. Add these literal hostnames to the applicable UniFi allowlist
+as well to override built-in or other filtering lists; `cdn.cookielaw\\.org`
+is regex notation and should not be pasted into a hostname-only field.
+
 The starting source is [HaGeZi Multi LIGHT](https://github.com/hagezi/dns-blocklists#light),
 which supplies ad/tracker domains. Its current snapshot is included in the generated
 list. Historical domains remain even if HaGeZi removes or reclassifies them later.
