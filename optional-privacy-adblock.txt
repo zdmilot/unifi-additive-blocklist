@@ -1,7 +1,8 @@
-! Optional only. NOT merged into either main feed or enabled automatically.
+! Originally optional. These six were subsequently requested by the user and
+! are now included in both main feeds. Kept as a standalone subset for reference.
 ! These six Safari-test hosts are in HaGeZi PRO, not NORMAL.
 ! They include error reporting, its web interfaces, and app analytics.
-! Load separately only if you want this additional privacy restriction.
+! Main-feed subscribers do not need to load this subset separately.
 ||api.bugsnag.com^
 ||app.bugsnag.com^
 ||app.getsentry.com^

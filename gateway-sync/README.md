@@ -7,7 +7,7 @@ AdGuard Home, separate Linux server, or always-on computer is required.
 ## Verified deployment
 
 On November 9, 2026, the Dream Machine Beast running UniFi OS 6.0.17 and Network
-11.0.99 accepted and returned all **207,310** domains in **UniFi Additive DNS
+11.0.99 accepted and returned all **207,316** domains in **UniFi Additive DNS
 Blocklist**. The original **AD Blocking Filter** has empty custom allow/block
 lists and is not the scheduled job's target. Both profiles retain native Ad Block:
 the inspected UI requires a filtering category or Ad Block to be enabled when
@@ -18,7 +18,7 @@ The IP-based firewall policy and Dynamic Network List were removed. Neither is
 needed by this tool. Historical flow logs and backups were not erased.
 
 The API read-back retained the complete new profile; the generated CoreDNS config
-had separate hostSet nodes for the two profiles and a separate 207,310-domain file
+had separate hostSet nodes for the two profiles and a separate supplemental domain file
 for the supplemental profile. From the LAN, `app-measurement.com` returned UniFi's
 blocking address `203.0.113.250`; `ui.com` and `example.com` returned normal DNS
 answers and HTTPS 200. This is a live deployment check, not a guarantee of every

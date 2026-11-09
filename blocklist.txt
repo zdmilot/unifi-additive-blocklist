@@ -27752,6 +27752,7 @@ api.branch.io
 api.browser.intl.miui.com
 api.brs.intl.miui.com
 api.bugsee.com
+api.bugsnag.com
 api.buzzvil.com
 api.bytebrew.io
 api.bytegle.site
@@ -28299,6 +28300,7 @@ app.bonnettsenergycentre.com
 app.bonusclientepremiado.click
 app.broadwayspokane.com
 app.bucky.uwbadgers.com
+app.bugsnag.com
 app.bushnell.org
 app.bxapi.de
 app.byutickets.com
@@ -28385,6 +28387,7 @@ app.gafreedom.com
 app.gaincapital.com
 app.georgiadogs.com
 app.get.comcastbiz.com
+app.getsentry.com
 app.getwoohoo.com
 app.gfis.genworth.com
 app.gfwm.genworth.com
@@ -28992,6 +28995,7 @@ appmetr.com
 appmetrica.mdigital.ru
 appmetrica.sovcombank.ru
 appmetrica.yandex.net
+appmetrica.yandex.ru
 appmobile.cn
 appmobilelinkgen.com
 appmon.shinhan.com
@@ -39171,6 +39175,7 @@ browser-sougou.com.cn
 browser-statistik.de
 browser-updater.yandex.net
 browser.miui.com
+browser.sentry-cdn.com
 browser9182.web.fc2.com
 browserbuilding.com
 browsercfg-drcn.cloud.dbankcloud.cn
@@ -115396,6 +115401,7 @@ metrika.lookmovie2.to
 metrika.myseldon.com
 metrika.traff.space
 metrika.yandex.com.tr
+metrika.yandex.ru
 metrilo.com
 metrix.behtarino.com
 metrix.emagister.com

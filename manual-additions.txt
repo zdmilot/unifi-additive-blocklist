@@ -32,3 +32,12 @@ tools.mouseflow.com
 udcm.yahoo.com
 w1.luckyorange.com
 weather-analytics-events.apple.com
+
+# User-requested remaining Chrome host checks, 2026-11-09.
+# Exact crash-reporting/analytics endpoints, including their service dashboards.
+api.bugsnag.com
+app.bugsnag.com
+browser.sentry-cdn.com
+app.getsentry.com
+appmetrica.yandex.ru
+metrika.yandex.ru

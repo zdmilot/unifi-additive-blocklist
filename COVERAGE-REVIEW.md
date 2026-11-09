@@ -5,10 +5,18 @@ additions and zero removals of committed history. The source is now HaGeZi NORMA
 with targeted manual entries. The domain-only and Adblock outputs represent the
 same set; use the Adblock output where explicit subdomain matching is required.
 
-This is a list-content review, not evidence that the router is enforcing it.
-The repository's last deployment record says the supplemental DNS feed is not
-enforced and the IP-based firewall policy is paused. A larger feed cannot fix that
-deployment gap. No gateway settings were changed during this review.
+This is a list-content review, not by itself evidence that the router is enforcing
+it. No gateway settings were changed during the initial review. A later deployment
+removed the unsuitable IP-based policy and installed a separate DNS Content Filter
+with scheduled gateway-local sync; see [deployment status](README.md#verified-deployment-status).
+
+### User-requested follow-up
+
+After the initial review, the user explicitly requested the remaining Chrome test
+hosts be added through GitHub and synchronized to UniFi. The six names listed
+below were promoted into `manual-additions.txt` and both generated main feeds,
+bringing the total to **207,316** with zero removals. The other four failed checks
+are browser-side cosmetic/script tests and cannot be represented as DNS domains.
 
 ## What was checked
 
@@ -132,7 +140,7 @@ can indicate that the supplemental feed is not enforced, that a resolver is
 using exact matching, an allow rule, a bypass, or cached results; this audit did
 not isolate which applies to the current Safari session.
 
-The remaining six are **optional**, separately provided in
+The remaining six were initially **optional**, separately provided in
 [`optional-privacy-adblock.txt`](optional-privacy-adblock.txt):
 
 ```text
@@ -146,7 +154,8 @@ metrika.yandex.ru
 
 They cover error reporting, its interfaces, and app analytics. They occur in
 HaGeZi PRO but not NORMAL. They are not all ad delivery endpoints, and forcing
-them into the default to improve a score would be a separate privacy choice.
+them into the default to improve a score is a separate privacy choice. The user
+subsequently requested that choice explicitly; they are now in the main feeds.
 
 ## False-positive review and remaining uncertainty
 
@@ -180,7 +189,7 @@ expected rule count and logs blocked queries; test the Bally root and `play`, an
 unlisted Bally subdomain for suffix behavior, and representative Yahoo/DT ad
 hosts. Separately check Yahoo login, inbox, attachments, images/video and ordinary
 sites such as `ui.com` and Xfinity. The previously paused UniFi IP-based firewall
-rule is unsuitable for this DNS feed and should remain paused.
+rule was unsuitable for this DNS feed and has since been removed.
 
 ## Validation performed
 
