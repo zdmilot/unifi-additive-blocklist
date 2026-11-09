@@ -1,0 +1,27 @@
+name: Checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m unittest discover -s tests -v
+      - name: Validate format, checksum, and append-only history
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          python3 update.py --check
+          if [ -n "$BASE" ] && [ "$BASE" != "0000000000000000000000000000000000000000" ]; then
+            git show "$BASE:blocklist.txt" > "$RUNNER_TEMP/previous-blocklist.txt"
+            python3 update.py --check --baseline "$RUNNER_TEMP/previous-blocklist.txt"
+          fi

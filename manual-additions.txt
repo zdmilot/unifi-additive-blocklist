@@ -1,0 +1,2 @@
+# Extra domains to add permanently, one domain per line.
+# Removing a line later will NOT remove it from blocklist.txt.

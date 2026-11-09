@@ -1,0 +1,15 @@
+{
+  "output": "blocklist.txt",
+  "report": "build-report.json",
+  "manual_additions": "manual-additions.txt",
+  "exclude_new": "exclude-new.txt",
+  "maximum_domains": 500000,
+  "sources": [
+    {
+      "name": "HaGeZi Multi LIGHT",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/light-onlydomains.txt",
+      "license": "GPL-3.0",
+      "minimum_domains": 10000
+    }
+  ]
+}

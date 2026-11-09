@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-11-09T05:14:32.377104+00:00",
+  "previous": 0,
+  "added": 88382,
+  "removed": 0,
+  "total": 88382,
+  "sha256": "99f0697d9979250a22df06d57be34cf9378e22a4adadf8a967b9b3ebb2ad96af",
+  "sources": [
+    {
+      "name": "HaGeZi Multi LIGHT",
+      "location": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/light-onlydomains.txt",
+      "license": "GPL-3.0",
+      "domains": 88382,
+      "sha256": "8cf07f8a21f34d3b47f08e2140d70d21eeb1bb9037a26c30b6025fb044fe1f3e"
+    }
+  ]
+}

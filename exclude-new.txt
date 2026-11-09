@@ -1,0 +1,2 @@
+# Exact domains to exclude BEFORE their first addition, one domain per line.
+# This never removes a domain already in blocklist.txt.
