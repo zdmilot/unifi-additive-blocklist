@@ -42800,6 +42800,7 @@
 ||cdn.cohesionapps.com^
 ||cdn.comedia.coccoc.com^
 ||cdn.connectif.cloud^
+||cdn.cookielaw.org^
 ||cdn.corvidae.ai^
 ||cdn.counter.dev^
 ||cdn.cpex.cz^
@@ -186803,6 +186804,7 @@
 ||udblog.huya.com^
 ||udbroker.com^
 ||udc.msn.com^
+||udc.yahoo.com^
 ||udcm.yahoo.com^
 ||udcuyvlyoqykt.site^
 ||udderedcuorin.cyou^

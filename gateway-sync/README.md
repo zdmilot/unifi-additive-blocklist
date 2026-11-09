@@ -7,7 +7,7 @@ AdGuard Home, separate Linux server, or always-on computer is required.
 ## Verified deployment
 
 On November 9, 2026, the Dream Machine Beast running UniFi OS 6.0.17 and Network
-11.0.99 accepted and returned all **207,372** domains in **UniFi Additive DNS
+11.0.99 accepted and returned all **207,374** domains in **UniFi Additive DNS
 Blocklist**. The original **AD Blocking Filter** has empty custom allow/block
 lists and is not the scheduled job's target. Both profiles retain native Ad Block:
 the inspected UI requires a filtering category or Ad Block to be enabled when

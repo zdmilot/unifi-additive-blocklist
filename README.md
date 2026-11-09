@@ -21,11 +21,12 @@ does not modify built-in list files or firmware.
 - [`exclude-new.txt`](exclude-new.txt): exact names to exclude before their first addition.
 - [`protected-domains.txt`](protected-domains.txt): named service hosts that must not match a block rule; a collision aborts a build, including if it is historical.
 - [`COVERAGE-REVIEW.md`](COVERAGE-REVIEW.md): Yahoo/Digital Turbine review, Bally Bet scope, Safari-test findings, and validation limits.
-- [`optional-privacy-adblock.txt`](optional-privacy-adblock.txt): six optional error-reporting/app-analytics rules; not included in either main feed.
+- [`optional-privacy-adblock.txt`](optional-privacy-adblock.txt): standalone reference subset of six error-reporting/app-analytics rules, now also included in both main feeds at the user's request.
 
-The previously requested exceptions `cdn.cookielaw.org` and `mobile-data.onetrust.io`
-are excluded from new upstream/manual additions. Neither was in the initial
-historical feed. Router allowlists are now managed by the user; the scheduled
+`mobile-data.onetrust.io` remains excluded from new upstream/manual additions.
+The user explicitly overrode the former `cdn.cookielaw.org` and `udc.yahoo.com`
+protections when requesting the Chrome test's missing hostnames; both are now
+blocked by the main feeds. Router allowlists are managed by the user; the scheduled
 gateway sync preserves the supplemental filter's current allowlist without
 adding exceptions automatically. Use literal hostnames in UniFi's hostname-only
 fields, not regex notation such as `cdn.cookielaw\\.org`.
@@ -104,7 +105,7 @@ caused unrelated sites to be blocked through shared IP addresses. Historical log
 and backups were retained.
 
 The separately named **UniFi Additive DNS Blocklist** Content Filter now contains
-all **207,372** domains from the plain-domain feed. The original **AD Blocking
+all **207,374** domains from the plain-domain feed. The original **AD Blocking
 Filter** remains enabled with empty custom allow/block lists. The gateway job
 targets only the supplemental profile, preserving any future user-managed
 allowlist there without inserting exceptions automatically.

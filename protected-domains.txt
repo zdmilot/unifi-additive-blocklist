@@ -15,15 +15,12 @@ yahooinc.com
 yahoodns.net
 yimg.com
 s.yimg.com
-# AdGuard explicitly excludes this Yahoo endpoint from DNS-wide blocking.
-udc.yahoo.com
 oath.com
 aol.com
 # Digital Turbine corporate information and documentation are not ad delivery.
 digitalturbine.com
 docs.digitalturbine.com
 # Previously requested exceptions and sites affected by IP-list enforcement.
-cdn.cookielaw.org
 mobile-data.onetrust.io
 ui.com
 example.com

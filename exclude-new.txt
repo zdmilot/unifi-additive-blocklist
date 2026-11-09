@@ -2,7 +2,6 @@
 # This never removes a domain already in blocklist.txt.
 # Permanent user-requested exclusions, added 2026-11-09.
 # Use literal hostnames; the dots are not regular-expression escapes.
-cdn.cookielaw.org
 mobile-data.onetrust.io
 # AdGuard DNS exclusions identifies this vendor website as not serving ads.
 # Reviewed before the NORMAL expansion was published; see COVERAGE-REVIEW.md.

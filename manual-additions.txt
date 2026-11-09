@@ -44,6 +44,9 @@ metrika.yandex.ru
 
 # User-requested reachable hostnames from Chrome Super Adblock Test, 2026-11-09.
 # Includes analytics, consent services, interfaces, and shared app APIs.
+# User explicitly overrode the former CookieLaw/Yahoo exclusions below.
+cdn.cookielaw.org
+udc.yahoo.com
 ads.huawei.com
 ads.microsoft.com
 ads.x.com

@@ -20,11 +20,12 @@ are browser-side cosmetic/script tests and cannot be represented as DNS domains.
 
 A subsequent Chrome run of Super Adblock Test showed 59 reachable checks. The
 user requested those missing names be added through GitHub as well. Another 56
-exact hostnames were added, bringing the main feeds to **207,372**. These include
+exact hostnames were initially added. The user then explicitly overrode the
+protected `cdn.cookielaw.org` and `udc.yahoo.com` exceptions, adding both and
+bringing the main feeds to **207,374** with all 58 requested hostnames. These include
 consent interfaces, feature flags, support/chat systems, affiliate routing,
 social application APIs, and video routing as explicitly requested; they are not
-all exclusively ad delivery. The protected `cdn.cookielaw.org` and `udc.yahoo.com`
-exceptions remain excluded. `vk.com/rtrg` is a URL path and was not converted into
+all exclusively ad delivery. `vk.com/rtrg` is a URL path and was not converted into
 a network-wide block on the whole `vk.com` hostname.
 
 ## What was checked
