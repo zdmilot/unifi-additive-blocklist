@@ -36,6 +36,14 @@ gsm-adverts.betstream.betgenius.com
 cdn.4dvertible.com
 api3.4dvertible.com
 
+# User-requested advertiser/DSP blocks, 2026-11-09.
+# Cantina is an intentional whole-site block. Moloco's delivery parent domains
+# cover regional API and creative hosts observed in the device traffic review.
+cantina.com
+dsp-api.moloco.com
+adsmoloco.com
+molocoads.com
+
 # User-requested Bally Bet site block: intentional gambling-site restriction.
 # The Adblock output covers the root and every subdomain, including play.
 ballybet.com

@@ -77,6 +77,15 @@ establish ownership by Digital Turbine or prove which encrypted response carried
 a particular ad. The user chose to retain access to Meta's shared CNAME aliases
 rather than disable Facebook/Instagram applications through those shared names.
 
+The user then explicitly requested the advertiser `cantina.com` and DSP Moloco
+Ads be blocked. `cantina.com`, `dsp-api.moloco.com`, and `adsmoloco.com` were added;
+`molocoads.com` was already historical and is now also recorded in manual inputs.
+The three new parent rules bring the feeds to **207,481** domains and cover the
+advertiser site and regional Moloco delivery subdomains. This includes the
+previously observed `eventfnt-us.dsp-api.moloco.com`, `noti-us.adsmoloco.com`, and
+`cdn-f.adsmoloco.com` hosts. The ordinary corporate `moloco.com` parent was not
+converted into a whole-site rule.
+
 ## What was checked
 
 Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its

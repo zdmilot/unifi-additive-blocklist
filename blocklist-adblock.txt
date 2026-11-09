@@ -14877,6 +14877,7 @@
 ||adsmogo.com^
 ||adsmogo.mobi^
 ||adsmogo.net^
+||adsmoloco.com^
 ||adsmrapi.imbc.com^
 ||adsnative.com^
 ||adsnet.se^
@@ -41425,6 +41426,7 @@
 ||cant3am.com^
 ||cantabsteroid.cfd^
 ||canteenrevertreed.com^
+||cantina.com^
 ||cantinadautoress.com^
 ||cantingku.icu^
 ||cantorspaver.com^
@@ -61390,6 +61392,7 @@
 ||dsp-adserver-alb-799935063.us-east-1.elb.amazonaws.com^
 ||dsp-analytics.valuadle.com^
 ||dsp-analytics.zenithflow.io^
+||dsp-api.moloco.com^
 ||dsp-impr2.youdao.com^
 ||dsp-rambler.ru^
 ||dsp-track-global.zmaticoo.com^
