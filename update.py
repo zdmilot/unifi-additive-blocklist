@@ -77,6 +77,24 @@ def encode(domains):
     return "".join(domain + "\n" for domain in sorted(domains))
 
 
+def encode_adblock(domains):
+    """Explicit suffix matching; a bare domain is exact-only in some resolvers."""
+    return "".join("||" + domain + "^\n" for domain in sorted(domains))
+
+
+def require_protected_names(domains, protected):
+    """Reject blocks on a protected hostname or any of its parent domains."""
+    conflicts = []
+    for hostname in sorted(protected):
+        labels = hostname.split(".")
+        for index in range(len(labels) - 1):
+            parent = ".".join(labels[index:])
+            if parent in domains:
+                conflicts.append(f"{parent} blocks protected name {hostname}")
+    if conflicts:
+        raise ValueError("Protected-domain violation: " + "; ".join(conflicts))
+
+
 def require_superset(previous, proposed):
     missing = previous - proposed
     if missing:
@@ -140,8 +158,11 @@ def build(args):
     config = json.loads(config_path.read_text(encoding="utf-8"))
     output = root / config["output"]
     report_path = root / config["report"]
-    if output.resolve() == report_path.resolve():
+    adblock_path = root / config["adblock_output"] if config.get("adblock_output") else None
+    paths = [output, report_path] + ([adblock_path] if adblock_path else [])
+    if len({path.resolve() for path in paths}) != len(paths):
         raise ValueError("Output and report paths must differ")
+    protected = read_domains(root / config["protected_domains"]) if config.get("protected_domains") else set()
     if args.check and (args.initialize or args.import_file):
         raise ValueError("--check cannot be combined with --initialize or --import")
     if args.check:
@@ -149,11 +170,17 @@ def build(args):
         domains = parse(actual)
         if not domains or actual != encode(domains):
             raise ValueError("Blocklist must be nonempty, sorted, unique, and canonical")
+        require_protected_names(domains, protected)
         if args.baseline:
             require_superset(read_domains(args.baseline), domains)
         report = json.loads(report_path.read_text(encoding="utf-8"))
         if report["sha256"] != hashlib.sha256(actual.encode()).hexdigest() or report["total"] != len(domains):
             raise ValueError("Build report does not match the blocklist")
+        if adblock_path:
+            actual_adblock = adblock_path.read_text(encoding="utf-8")
+            if (actual_adblock != encode_adblock(domains)
+                    or report.get("adblock_sha256") != hashlib.sha256(actual_adblock.encode()).hexdigest()):
+                raise ValueError("Adblock output does not match the blocklist/report")
         print(f"Verified {len(domains)} domains")
         return
     if args.baseline:
@@ -184,6 +211,7 @@ def build(args):
     candidates.difference_update(exclusions)
     proposed = previous | imported | candidates
     require_superset(previous, proposed)
+    require_protected_names(proposed, protected)
     if not proposed:
         raise ValueError("Refusing an empty blocklist")
     if len(proposed) > config["maximum_domains"]:
@@ -192,12 +220,17 @@ def build(args):
     report = {"generated_at": datetime.now(timezone.utc).isoformat(), "previous": len(previous),
               "added": len(proposed - previous), "removed": 0, "total": len(proposed),
               "sha256": hashlib.sha256(text.encode()).hexdigest(), "sources": sources}
+    adblock_text = encode_adblock(proposed) if adblock_path else None
+    if adblock_path:
+        report["adblock_sha256"] = hashlib.sha256(adblock_text.encode()).hexdigest()
     if args.write:
         # Refuse stale writes when another updater changed the file during downloads.
         current = output.read_text(encoding="utf-8") if output.exists() else ""
         if current != old_text:
             raise ValueError("Blocklist changed during update; retry against the latest version")
         atomic_write(output, text)
+        if adblock_path:
+            atomic_write(adblock_path, adblock_text)
         atomic_write(report_path, json.dumps(report, indent=2) + "\n")
     print(json.dumps({"mode": "written" if args.write else "dry-run", **report}, indent=2))
 

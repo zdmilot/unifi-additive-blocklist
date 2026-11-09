@@ -1,0 +1,196 @@
+# Coverage review — November 9, 2026
+
+The reviewed main feeds contain **207,310 domains**, up from 88,382: 118,928
+additions and zero removals of committed history. The source is now HaGeZi NORMAL,
+with targeted manual entries. The domain-only and Adblock outputs represent the
+same set; use the Adblock output where explicit subdomain matching is required.
+
+This is a list-content review, not evidence that the router is enforcing it.
+The repository's last deployment record says the supplemental DNS feed is not
+enforced and the IP-based firewall policy is paused. A larger feed cannot fix that
+deployment gap. No gateway settings were changed during this review.
+
+## What was checked
+
+Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its
+exclusions/exceptions, OISD big, Peter Lowe, EasyList's ad-server section, and
+EasyPrivacy's tracking-server section. The EasyPrivacy section checked is small
+and is not the complete EasyPrivacy collection. The lists overlap and often share
+upstreams; agreement is corroboration, not independent proof of safety.
+
+[`coverage-review.json`](coverage-review.json) records exact URLs, hashes,
+review time, all 25 Safari domain results, relevant vendor hostnames, named-host
+protection checks, and cross-publisher disagreements. These are dated snapshots;
+the daily build report records the continuously fetched NORMAL source separately.
+
+NORMAL supplies broader coverage without automatically adding PRO's crash
+reporting restrictions. PRO/ULTIMATE, threat feeds, whole gambling categories,
+and browser-specific contextual rules were inspected or considered but not blindly
+merged. The main feed still includes tracking and telemetry, not just visual ads.
+
+## Bally Bet: root and every subdomain
+
+The requested restriction is intentional blocking of the betting service, rather
+than classifying its entire website as an ad server. Plain-domain entries include:
+
+```text
+ballybet.com
+play.ballybet.com
+```
+
+For AdGuard Home or another compatible Adblock DNS filter, the complete rule is:
+
+```text
+||ballybet.com^
+```
+
+This covers the root, `play`, and other subdomains at any depth. A bare hostname
+can be exact-only depending on the resolver. `*.ballybet.com` is not accepted in
+this repository's domain-only files. `ballys.com` and shared platforms used by
+other betting operators were not added. This request was not expanded into a
+block of every gambling site or every Bally-branded service.
+
+## Digital Turbine
+
+The main feed contains 38 names in the reviewed Digital Turbine families:
+AdColony, Fyber, Inneractive, SponsorPay, TPBid, and specific DT Ignite endpoints.
+Several roots were already in the LIGHT baseline:
+
+```text
+adcolony.com
+fyber.com
+inner-active.mobi
+sponsorpay.com
+tpbid.com
+```
+
+The explicit suffix-rule output covers their subdomains, including AdColony's
+advertising hosts. The expanded feed also includes 32 specific `dtignite.com`
+client API/download hosts and the additional Inneractive family root recorded in
+the JSON audit. Root-level `dtignite.com` and `digitalturbine.com` blocks were
+withheld: the latter hosts corporate information/documentation, while Ignite also
+provides app installation and recommendations. No domains were invented from
+branding or registration similarities.
+
+Blocking these services can prevent rewarded ads, offer-wall rewards, developer
+console access under already-blocked vendor roots, and promotional app installs.
+These are limits of DNS blocking, even when the intended ad delivery is caught.
+Corporate documentation on `docs.digitalturbine.com` is checked as a protected
+name; this does not guarantee access to every legacy Fyber console or website.
+
+Vendor context: [Digital Turbine legal/acquisitions](https://www.digitalturbine.com/legal),
+[app-install service description](https://www.digitalturbine.com/legal/dt-clients-ignite-terms-of-service).
+
+## Yahoo-hosted ads
+
+The main feed contains 48 names across reviewed Yahoo, Yahoo CDN, legacy ad-tech,
+and related families. It includes specific ad and measurement endpoints such as:
+
+```text
+ads.yahoo.com
+adserver.yahoo.com
+analytics.yahoo.com
+analytics.query.yahoo.com
+beap-bc.yahoo.com
+cookiex.ngd.yahoo.com
+gemini.yahoo.com
+log.fc.yahoo.com
+partnerads.ysm.yahoo.com
+udcm.yahoo.com
+adtech.yahooinc.com
+ads.yimg.com
+```
+
+Two additional endpoints, `3p-udc.yahoo.com` and `bats.video.yahoo.com`, were
+corroborated in both AdGuard DNS and OISD. NORMAL and retained history provide the
+other family entries listed in the audit. The family count measures names, not
+distinct companies or the number of requests blocked.
+
+Do not replace this with blanket blocks on `yahoo.com`, `yahoo.net`, `yimg.com`,
+`s.yimg.com`, `yahooinc.com`, or `yahoodns.net`. Named-host checks prevent a parent
+block from covering Yahoo Mail, login, finance/news/search/sports pages, and the
+shared `s.yimg.com` content host. `udc.yahoo.com`, which AdGuard excludes from
+DNS-wide blocking, is protected too; it is different from `udcm.yahoo.com`.
+
+Some Yahoo ads/tracking share a hostname with useful images or scripts. DNS
+cannot distinguish those URL paths. A browser content blocker using maintained
+EasyList/AdGuard Base and privacy filters is needed for that part. No browser
+URL/path rule was broadened into an entire shared-host DNS block. See the
+[maintainer's Yahoo Mail report](https://github.com/uBlockOrigin/uAssets/issues/31800)
+and [AdGuard's contextual Yahoo rules](https://github.com/AdguardTeam/AdguardFilters/blob/master/BaseFilter/sections/allowlist.txt).
+
+## The Safari test and why a perfect score is not the target
+
+The displayed 29 failures were 25 domains plus Static Ad, Dynamic Ad, `ads.js`,
+and `pagead.js`. The latter four are page/script tests, not missing domains.
+Do not block the test site itself to hide these failures.
+
+Eighteen of the 25 domain failures were already covered by LIGHT under suffix
+matching. NORMAL covers one more (`business-api.tiktok.com`). All 19 are now
+explicit manual hostnames as well. Observed failures on names already present
+can indicate that the supplemental feed is not enforced, that a resolver is
+using exact matching, an allow rule, a bypass, or cached results; this audit did
+not isolate which applies to the current Safari session.
+
+The remaining six are **optional**, separately provided in
+[`optional-privacy-adblock.txt`](optional-privacy-adblock.txt):
+
+```text
+api.bugsnag.com
+app.bugsnag.com
+app.getsentry.com
+appmetrica.yandex.ru
+browser.sentry-cdn.com
+metrika.yandex.ru
+```
+
+They cover error reporting, its interfaces, and app analytics. They occur in
+HaGeZi PRO but not NORMAL. They are not all ad delivery endpoints, and forcing
+them into the default to improve a score would be a separate privacy choice.
+
+## False-positive review and remaining uncertainty
+
+Three new source candidates were withheld before publication: `totaladblock.com`
+(AdGuard says its website is not used to show ads), `admin.dable.io`, and
+`proto2ad.durasite.net` (AdGuard exception entries). They are in `exclude-new.txt`
+and checked against future parent-block reintroduction.
+
+The build also checks named critical hosts and your exact CookieLaw/OneTrust
+exceptions. A collision fails before output writes. This protects only the named
+hosts against matching parent rules; it is not a broad live allowlist, a CNAME
+test, or certification that every other domain is safe to block.
+
+The cross-publisher scan found **18 pre-existing direct hostname disagreements**
+with AdGuard exclusions/exceptions, detailed in the JSON audit. Examples include
+`api.amplitude.com`, `cxpublic.com`, `etracker.com`, and specific content/console
+hosts underneath historical ad-network roots. These are compatibility risks or
+policy differences, not confirmed household breakage. No blanket allow was
+silently applied. CNAME-target disagreements and complex contextual exceptions
+need additional runtime evaluation; this scan does not enumerate all of them.
+
+Also, 552 historical LIGHT names are absent from the current NORMAL snapshot.
+That alone does not establish false positives, but the append-only policy keeps
+them, and future upstream corrections cannot remove historical names. Therefore
+neither this review nor a 100% ad-test score can establish zero false positives.
+Confirmed unwanted blocks need a resolver allow rule or an explicitly approved
+change to the repository's historical-retention policy.
+
+Before considering the feed deployed, verify the resolver actually imports the
+expected rule count and logs blocked queries; test the Bally root and `play`, an
+unlisted Bally subdomain for suffix behavior, and representative Yahoo/DT ad
+hosts. Separately check Yahoo login, inbox, attachments, images/video and ordinary
+sites such as `ui.com` and Xfinity. The previously paused UniFi IP-based firewall
+rule is unsuitable for this DNS feed and should remain paused.
+
+## Validation performed
+
+The 13 local tests pass, including failure-before-write for protected-name
+collisions, output-format consistency, checksum tampering, failed sources,
+concurrent updates, and retention of committed domains. Offline validation checks
+both generated feeds against the build report and the original 88,382-domain
+baseline. Every reviewed main-feed hostname and protected name is checked for
+label-boundary suffix coverage. These are content/build checks; live DNS,
+browser, Yahoo account, app-install, and rewarded-ad behavior were not tested.
+
+Matching reference: [AdGuard DNS syntax](https://adguard-dns.io/kb/general/dns-filtering-syntax/).
+UniFi configuration reference: [Ubiquiti DNS Content Filtering](https://help.ui.com/hc/en-us/articles/12568927589143-Content-and-Domain-Filtering-in-UniFi).
