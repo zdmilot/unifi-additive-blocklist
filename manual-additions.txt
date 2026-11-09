@@ -2,6 +2,35 @@
 # Removing a line later will NOT remove it from blocklist.txt.
 # See COVERAGE-REVIEW.md and coverage-review.json for evidence and scope.
 
+# Meta tracking endpoints and graph fallbacks, reviewed 2026-11-09.
+# ep7 was observed connecting successfully; siblings/fallbacks are documented in
+# https://github.com/hagezi/dns-blocklists/blob/main/share/facebook.txt
+# These shared app APIs can also affect Facebook/Instagram functionality.
+ep1.facebook.com
+ep2.facebook.com
+ep6.facebook.com
+ep7.facebook.com
+ep8.facebook.com
+ep9.facebook.com
+connect.facebook.com
+b-graph.facebook.com
+b-graph-fallback.facebook.com
+graph-fallback.facebook.com
+graph.fbpigeon.com
+graph.m-freeway.com
+z-m-graph.facebook.com
+
+# Ad supply, creative delivery, and measurement hosts observed reaching their
+# origins during a local DNS review, 2026-11-09. Exact hostnames only.
+cdn.collabollc.com
+maestro-ue1.tps.dv.tech
+eventfnt-us.dsp-api.moloco.com
+api.iad3rs0zonea.pubnative.net
+cdn.pubnative.net
+creative.stackadapt.com
+html.stackadapt.com
+gsm-adverts.betstream.betgenius.com
+
 # User-requested Bally Bet site block: intentional gambling-site restriction.
 # The Adblock output covers the root and every subdomain, including play.
 ballybet.com

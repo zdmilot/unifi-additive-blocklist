@@ -43,6 +43,31 @@ API whose network-wide denial can disrupt YouTube, and `greatis.com`, a
 `vk.com/rtrg` remains omitted. This is a domain-coverage change, not a claim of
 100% advertising prevention or of safety for every benchmark entry.
 
+### Meta and mobile ad delivery follow-up
+
+A local device traffic review found successful connections to `ep7.facebook.com`
+and several ad supply, creative delivery, and measurement hostnames that were
+absent from the main feed. Twenty-one names were added: 13 Meta tracking/graph
+endpoints and eight exact ad supply/creative/measurement hosts. The Meta siblings
+and fallbacks are documented in [HaGeZi's service notes](https://github.com/hagezi/dns-blocklists/blob/main/share/facebook.txt).
+The main feeds now contain **207,476** domains, with zero removals. Private device
+logs, application usage, addresses, and captures are not published in this repo.
+
+The observed Fyber/Inneractive delivery and event hostnames were already blocked
+by the native Content Filter through the existing `fyber.com` and
+`inner-active.mobi` rules. Adding the other observed ad hosts closes specific
+gaps, but does not establish which partner supplied a branded ad. No broad Meta
+content-CDN, CloudFront, S3, or shared-IP block was introduced. Meta graph/tracking
+endpoints can also support normal Facebook/Instagram features; the aggressive
+service scope is intentional. Cached DNS, existing connections, cached ads, and
+encrypted alternative DNS remain limits of domain filtering.
+
+The same review confirmed blocks for InMobi's `eus-r.w.inmobi.com`,
+`et-eus.w.inmobi.com`, `unif-id.ssp.inmobi.com`, `supply.inmobicdn.net`, and
+`i.l.inmobicdn.net`. The existing `inmobi.com` and `inmobicdn.net` rules already
+cover those names. A visible InMobi label alone is not evidence that those DNS
+blocks failed or that any unrelated content CDN should be denied.
+
 ## What was checked
 
 Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its

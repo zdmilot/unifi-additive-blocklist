@@ -27831,6 +27831,7 @@ api.huqindustries.co.uk
 api.hybrid.xiaomi.com
 api.hzsanjiaomao.com
 api.iad-05.braze.com
+api.iad3rs0zonea.pubnative.net
 api.imdb.us-east-1.prod.mario.imdbtv.amazon.dev
 api.impact.com
 api.inmobi.com
@@ -32338,6 +32339,8 @@ b-7.jp
 b-chauffage.de
 b-click.net
 b-google.hl.cn
+b-graph-fallback.facebook.com
+b-graph.facebook.com
 b-m.xyz
 b-sing.com
 b-tinternetfghb.plutio.com
@@ -42820,6 +42823,7 @@ cdn.choicely.com
 cdn.clicktale.net
 cdn.clinch.co
 cdn.cohesionapps.com
+cdn.collabollc.com
 cdn.comedia.coccoc.com
 cdn.connectif.cloud
 cdn.cookielaw.org
@@ -42948,6 +42952,7 @@ cdn.privacy-mgmt.com
 cdn.prod.adskit.juno.alexa.amazon.dev
 cdn.prod.euid.eu
 cdn.provesrc.com
+cdn.pubnative.net
 cdn.pushowl.com
 cdn.pushwoosh.com
 cdn.qc24h.com
@@ -47807,6 +47812,7 @@ connect.digi.com
 connect.dimensiondata.com
 connect.eamc.org
 connect.evocalize.com
+connect.facebook.com
 connect.facebook.net
 connect.frontier.com
 connect.groupamana.com
@@ -49658,6 +49664,7 @@ creative.sexfortokens.com
 creative.shemale.show
 creative.showtime-cams.live
 creative.sphdigital.com
+creative.stackadapt.com
 creative.strip.chat
 creative.stripcam.xxx
 creative.stripchat.com
@@ -65901,6 +65908,12 @@ eoyqzzk.cn
 ep.jamx.ai
 ep.regis.edu
 ep.umobile.pl
+ep1.facebook.com
+ep2.facebook.com
+ep6.facebook.com
+ep7.facebook.com
+ep8.facebook.com
+ep9.facebook.com
 epaaab.com
 epacash.com
 epaes.com.cn
@@ -67333,6 +67346,7 @@ eventdirectfree.ru
 eventdoorway.ru
 eventeasyfree.ru
 eventexistence.com
+eventfnt-us.dsp-api.moloco.com
 eventfreeform.ru
 eventgaragefree.ru
 eventgatehub.ru
@@ -79148,8 +79162,11 @@ grapeshot.co.uk
 grapevinecounselingandtherapy.com
 grapewinesales.com
 graph-9-1.net.mydays.de
+graph-fallback.facebook.com
 graph.facebook.com
+graph.fbpigeon.com
 graph.instagram.com
+graph.m-freeway.com
 graph0-8-0.net.mydays.de
 graph1-01.net.mydays.de
 graph2-6-2.net.mydays.de
@@ -79802,6 +79819,7 @@ gskhszfizlh.com
 gslb.hpplay.cn
 gslive.edm.globalsources.com
 gslozndcnlvvi.site
+gsm-adverts.betstream.betgenius.com
 gsmartcontrol.com
 gsmatch.edm.globalsources.com
 gsmbuzz.com
@@ -85196,6 +85214,7 @@ html-5.me
 html-load.cc
 html-static.shop
 html-uap.iads.unity3d.com
+html.stackadapt.com
 html2canvas.com
 html2canvas.net
 html2canvas.org
@@ -104772,6 +104791,7 @@ maeandrose.de
 maebtjn.com
 maehlholz.com
 maerkischeskinderdorf.de
+maestro-ue1.tps.dv.tech
 maestrocard.com.102.122.2o7.net
 maestrogulpedgag.com
 maextrocars.com
@@ -204867,6 +204887,7 @@ z-lib.ink
 z-lib.io
 z-lib.wiki
 z-lib.ws
+z-m-graph.facebook.com
 z-milosci.pl
 z-na.amazon-adsystem.com
 z-openclaw.com.cn
