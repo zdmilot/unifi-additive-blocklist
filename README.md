@@ -6,9 +6,10 @@ A supplemental DNS domain list for UniFi with **append-only updates**:
 next blocklist = every previously added domain ∪ new accepted domains
 ```
 
-UniFi's built-in ad blocking and content-filter policies stay in place. This project
-builds an additional, plain-text list; it does not log into a gateway or modify its
-firmware, DNS configuration, built-in lists, or existing policies.
+UniFi's built-in ad blocking and content-filter policies stay in place. The feed
+builder creates additional plain-text lists. The optional [gateway sync](gateway-sync/README.md)
+updates a separately named DNS Content Filter through UniFi's internal API; it
+does not modify built-in list files or firmware.
 
 ## Files you can use
 
@@ -22,11 +23,12 @@ firmware, DNS configuration, built-in lists, or existing policies.
 - [`COVERAGE-REVIEW.md`](COVERAGE-REVIEW.md): Yahoo/Digital Turbine review, Bally Bet scope, Safari-test findings, and validation limits.
 - [`optional-privacy-adblock.txt`](optional-privacy-adblock.txt): six optional error-reporting/app-analytics rules; not included in either main feed.
 
-The user-requested exceptions `cdn.cookielaw.org` and `mobile-data.onetrust.io`
+The previously requested exceptions `cdn.cookielaw.org` and `mobile-data.onetrust.io`
 are excluded from new upstream/manual additions. Neither was in the initial
-historical feed. Add these literal hostnames to the applicable UniFi allowlist
-as well to override built-in or other filtering lists; `cdn.cookielaw\\.org`
-is regex notation and should not be pasted into a hostname-only field.
+historical feed. Router allowlists are now managed by the user; the scheduled
+gateway sync preserves the supplemental filter's current allowlist without
+adding exceptions automatically. Use literal hostnames in UniFi's hostname-only
+fields, not regex notation such as `cdn.cookielaw\\.org`.
 
 The maintained source is [HaGeZi Multi NORMAL](https://github.com/hagezi/dns-blocklists#normal),
 selected for broader coverage with a lower risk of breakage than PRO/PRO++/ULTIMATE.
@@ -70,16 +72,18 @@ Filter accepts domains, but its subdomain behavior needs verification on your
 firmware; the documentation's DNS-forwarding wildcard example is not proof of
 Content Filter matching semantics.
 
-The resolver host and DNS routing must be selected before deploying that approach;
-this repository does not install a resolver or alter DNS routing automatically.
+The resolver host and DNS routing must be selected before deploying that approach.
+For the installed gateway-only alternative, see [gateway sync](gateway-sync/README.md):
+a scheduled script fetches the plain-domain feed into a separate native DNS
+Content Filter, without an external DNS server.
 
 Use a raw file URL, not this repository's HTML page. Both serve plain UTF-8 text,
 one domain or rule per line, with no token or login needed.
 GitHub Actions maintains both feeds daily; the subscribing DNS filter polls
 it on its configured schedule. Do not paste the feed URL into a field expecting
-an individual blocked domain. Delivery uses a URL subscription, not a router-side
-script or a one-time file import. Publishing on GitHub Pages would not change
-UniFi's enforcement semantics.
+an individual blocked domain. External DNS filters can subscribe to the URL;
+the installed UniFi integration uses the gateway-side script. Publishing on GitHub
+Pages would not change UniFi's enforcement semantics.
 
 ### UniFi version requirements
 
@@ -94,21 +98,30 @@ does not add DNS-level URL subscription support to Content Filter.
 
 ### Verified deployment status
 
-On November 9, 2026, UniFi Network 11.0.99 successfully loaded all 88,382 domains
-into the dynamic **UniFi Additive Blocklist** network list, with a 24-hour refresh
-interval. The separate **UniFi Additive Content Blocker** firewall policy was
-created and tested, then **paused** after its flow logs showed it blocking
-`ui.com`, `example.com`, and `idm.xfinity.com`, even though none of these names or
-their parents is in the feed. `ui.com` and `example.com` returned HTTP 200 after
-the rule was paused. Do not resume it as a general DNS ad blocker.
+On November 9, 2026, the obsolete **UniFi Additive Content Blocker** firewall policy
+and **UniFi Additive Blocklist** Dynamic Network List were removed. They had
+caused unrelated sites to be blocked through shared IP addresses. Historical logs
+and backups were retained.
 
-The downloaded list remains under **Settings → Networks → Network Lists**. The
-paused policy remains under **Settings → Policy Engine → Policy Table** for
-inspection. The supplemental feed is not currently enforced by a DNS filter.
+The separately named **UniFi Additive DNS Blocklist** Content Filter now contains
+all **207,310** domains from the plain-domain feed. The original **AD Blocking
+Filter** remains enabled with empty custom allow/block lists. The gateway job
+targets only the supplemental profile, preserving any future user-managed
+allowlist there without inserting exceptions automatically.
 
-The original **AD Blocking Filter** remains in place, including the CookieLaw and
-OneTrust allowlist entries. The two exception domains and their parents are absent
-from the published supplemental feed.
+The gateway sync runs **Sunday and Wednesday at 02:00 America/New_York**, with a
+manual `unifi-blocklist-sync` command on the gateway. A startup restore service
+recreates its cron file from persistent SSD storage. Both manual and cron runner
+tests succeeded, and the restore service recreated a temporarily moved cron file.
+No reboot or firmware upgrade was performed; future firmware/API compatibility
+is not guaranteed. See [deployment, verification, and recovery](gateway-sync/README.md).
+
+The tested system is UniFi OS 6.0.17 / Network 11.0.99. The native Content Filtering
+Block Page setting was disabled after Safari's test treated returned block pages
+as reachable hosts. The site's JavaScript counts any successful HTTP response as
+not blocked; it does not identify which server answered. Direct DNS tests showed
+every test hostname covered by this feed was being blocked. `ui.com` and
+`example.com` remained reachable over HTTPS.
 
 ## Update locally
 

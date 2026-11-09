@@ -16,6 +16,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python3 -m unittest discover -s tests -v
+      - run: python3 -m unittest discover -s gateway-sync -p 'test_*.py' -v
       - name: Validate format, checksum, and append-only history
         env:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}

@@ -1,0 +1,5 @@
+# Managed from /data/unifi-additive-sync/cron by the restore service.
+# Gateway timezone is America/New_York. Sunday and Wednesday at 02:00.
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+0 2 * * 0,3 root /data/unifi-additive-sync/run-sync.sh

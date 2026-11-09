@@ -1,0 +1,9 @@
+# Deployment data and credentials must never be published.
+api-key
+config.json
+history.json
+sync.lock
+last-success.json
+backups/
+before-*.json
+__pycache__/
