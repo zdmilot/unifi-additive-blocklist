@@ -31,6 +31,11 @@ creative.stackadapt.com
 html.stackadapt.com
 gsm-adverts.betstream.betgenius.com
 
+# Additional creative-service hosts observed during the follow-up, 2026-11-09.
+# Vendor context: https://adcontextprotocol.org/registry/ (Advertible Inc.).
+cdn.4dvertible.com
+api3.4dvertible.com
+
 # User-requested Bally Bet site block: intentional gambling-site restriction.
 # The Adblock output covers the root and every subdomain, including play.
 ballybet.com

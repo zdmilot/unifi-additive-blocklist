@@ -68,6 +68,15 @@ The same review confirmed blocks for InMobi's `eus-r.w.inmobi.com`,
 cover those names. A visible InMobi label alone is not evidence that those DNS
 blocks failed or that any unrelated content CDN should be denied.
 
+A subsequent live capture found successful DNS answers and TLS handshakes for
+`cdn.4dvertible.com` and `api3.4dvertible.com` during another ad attempt, while
+Fyber's endpoints returned blocking answers. Both exact names were added, bringing
+the feeds to **207,478** domains. The [AdCP registry](https://adcontextprotocol.org/registry/)
+associates the `4dvertible.com` service with Advertible Inc.; that does not
+establish ownership by Digital Turbine or prove which encrypted response carried
+a particular ad. The user chose to retain access to Meta's shared CNAME aliases
+rather than disable Facebook/Instagram applications through those shared names.
+
 ## What was checked
 
 Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its

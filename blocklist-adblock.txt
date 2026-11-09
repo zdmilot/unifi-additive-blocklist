@@ -27978,6 +27978,7 @@
 ||api2.e.kuaishou.com^
 ||api2.poperblocker.com^
 ||api2.wshareit.com^
+||api3.4dvertible.com^
 ||api3.appsflyer.com^
 ||api3.branch.io^
 ||api5-normal-quic-lf.ixigua.com^
@@ -42766,6 +42767,7 @@
 ||cdn.1vag.com^
 ||cdn.20fm.com^
 ||cdn.234doo.com^
+||cdn.4dvertible.com^
 ||cdn.613bz.com^
 ||cdn.7nsc.cn^
 ||cdn.90mm1.com^
