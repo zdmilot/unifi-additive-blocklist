@@ -18332,6 +18332,7 @@ alhrghtkvtwvz.online
 ali-ad.a.yximgs.com
 ali-p2p-v2.pull.yximgs.com
 ali-p2p.pull.yximgs.com
+ali-vg-track.algogear.com
 ali-web-player-tracker.biliapi.net
 ali2.a.yximgs.com
 aliams.de
@@ -43036,6 +43037,7 @@ cdn1.pebx.pl
 cdn1.profitmetrics.io
 cdn1.skrill.com
 cdn1.smartadserver.com
+cdn2-inner-active.map.fastly.net
 cdn2.cache.vn
 cdn2.popcash.net
 cdn2cdn.me
@@ -77590,6 +77592,7 @@ global-user-tracker.replit.app
 global.appnext.com
 global.ecs.arrow.com
 global.kb.help
+global.moloco.map.fastly.net
 global.raboag.com
 global.siemensplmevents.com
 global.successfactors.com
@@ -117655,6 +117658,7 @@ mollyindmy.com
 molnyonon.com
 moloco-cr.jiocinema.com
 moloco.analytics.prod.craftsmanplus.com
+moloco.map.fastly.net
 molocoads.com
 moltiflixtools.shop
 molttencoryzalanopia.cfd

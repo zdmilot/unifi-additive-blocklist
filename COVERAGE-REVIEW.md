@@ -86,6 +86,24 @@ previously observed `eventfnt-us.dsp-api.moloco.com`, `noti-us.adsmoloco.com`, a
 `cdn-f.adsmoloco.com` hosts. The ordinary corporate `moloco.com` parent was not
 converted into a whole-site rule.
 
+The next live DNS/TLS review found direct queries for
+`global.moloco.map.fastly.net` followed by TLS connections using
+`cdn-f.adsmoloco.com`, despite the latter's existing DNS block. Public DNS confirms
+that Moloco's hostname aliases to that Fastly service name. The service-specific
+`moloco.map.fastly.net` parent, its observed `global` name, and
+`cdn2-inner-active.map.fastly.net` (the current alias of `cdn2.inner-active.mobi`)
+were added. An observed AlgoGear tracking host, `ali-vg-track.algogear.com`, was
+also added; [AlgoGear describes its programmatic ad platform](https://algogear.com/).
+The feeds now contain **207,485** domains. No shared Fastly parent or CDN IP was
+blocked.
+
+The reviewed Unity webview/icon CloudFront aliases were already in the feed,
+and the reviewed Google ad endpoints already returned blocking answers. These
+observations do not identify the encrypted content of each displayed ad or rule
+out preloaded content, existing connections, cellular traffic, or alternative
+DNS. A third-party ad label is insufficient evidence to block ordinary Google,
+Apple, or application content services.
+
 ## What was checked
 
 Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its

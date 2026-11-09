@@ -105,7 +105,7 @@ caused unrelated sites to be blocked through shared IP addresses. Historical log
 and backups were retained.
 
 The separately named **UniFi Additive DNS Blocklist** Content Filter now contains
-all **207,481** domains from the plain-domain feed. The original **AD Blocking
+all **207,485** domains from the plain-domain feed. The original **AD Blocking
 Filter** remains enabled with empty custom allow/block lists. The gateway job
 targets only the supplemental profile, preserving any future user-managed
 allowlist there without inserting exceptions automatically.

@@ -44,6 +44,17 @@ dsp-api.moloco.com
 adsmoloco.com
 molocoads.com
 
+# Service-specific CDN aliases: public DNS binds these to Moloco/Inneractive.
+# A device was observed querying the Moloco alias directly after the ad hostname
+# was blocked. Do not replace these with blocks on the shared fastly.net parent.
+moloco.map.fastly.net
+global.moloco.map.fastly.net
+cdn2-inner-active.map.fastly.net
+
+# Observed tracking endpoint of AlgoGear's programmatic advertising platform.
+# Vendor context: https://algogear.com/
+ali-vg-track.algogear.com
+
 # User-requested Bally Bet site block: intentional gambling-site restriction.
 # The Adblock output covers the root and every subdomain, including play.
 ballybet.com
