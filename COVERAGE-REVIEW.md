@@ -28,6 +28,21 @@ social application APIs, and video routing as explicitly requested; they are not
 all exclusively ad delivery. `vk.com/rtrg` is a URL path and was not converted into
 a network-wide block on the whole `vk.com` hostname.
 
+The user also requested additional missing hosts from the Safari OBFUSGATED test.
+Its current published inventory supplied 83 plain hostnames not covered by the
+main feed. Of these, 68 already returned blocking addresses through UniFi's native
+filter, so a browser's "accessible" label was not treated as proof that the
+gateway allowed the origin. Another 81 names were added explicitly to the main
+feeds, bringing the total to **207,455**, with zero historical removals. The feed
+was published to GitHub before the gateway sync.
+
+Two candidates were held out: `youtubei.googleapis.com`, a YouTube application
+API whose network-wide denial can disrupt YouTube, and `greatis.com`, a
+[security-software vendor](https://greatis.com/) placed by the test under
+"Malicious Scripts." These require a separate user choice. The URL-path case
+`vk.com/rtrg` remains omitted. This is a domain-coverage change, not a claim of
+100% advertising prevention or of safety for every benchmark entry.
+
 ## What was checked
 
 Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-09T06:50:27.134245+00:00",
-  "previous": 207372,
-  "added": 2,
+  "generated_at": "2026-11-09T06:56:49.189405+00:00",
+  "previous": 207374,
+  "added": 81,
   "removed": 0,
-  "total": 207374,
-  "sha256": "6b42ac93983a26fb3a7cd5365c5fb365628557e8770c73da6b13e2282805460e",
+  "total": 207455,
+  "sha256": "5556996379ad9716cef1782cb6ccd2ad449cba8f924a9821945242a8e1c7d1f5",
   "sources": [
     {
       "name": "HaGeZi Multi NORMAL",
@@ -14,5 +14,5 @@
       "sha256": "b4142a8f9cc81ad77ebe7d765f1a9f10fe3f409bb85d23c60d395cf7b686e77d"
     }
   ],
-  "adblock_sha256": "83794cdd12bd3f5d354184d79c9690d09ead2953f8a1db57af8528ed97644b79"
+  "adblock_sha256": "1bdeb5e35c34c19bd3ad564bc9cafe5d046b4baaf74a09e464e3713ccea081d6"
 }
