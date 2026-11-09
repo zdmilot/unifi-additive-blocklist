@@ -29,7 +29,7 @@ which supplies ad/tracker domains. Its current snapshot is included in the gener
 list. Historical domains remain even if HaGeZi removes or reclassifies them later.
 Source attribution and licensing are in [SOURCES.md](SOURCES.md).
 
-## Subscribe from UniFi
+## Subscription URL and UniFi limitation
 
 The repository and list are public. Use this stable, anonymous HTTPS feed URL:
 
@@ -37,34 +37,30 @@ The repository and list are public. Use this stable, anonymous HTTPS feed URL:
 https://raw.githubusercontent.com/zdmilot/unifi-additive-blocklist/main/blocklist.txt
 ```
 
-**Prerequisites: UniFi Network 11 with External Network Lists and UniFi OS
-6.0.10 or newer.** Ubiquiti documents this feature and requirement in its
-[Network 11 release notes](https://community.ui.com/releases/UniFi-Network-Application-11-0-97/15662d06-8122-44e2-a1ba-af5d71b8a045).
-Network 10.6 and OS 5 do not provide this native URL-subscription feature.
-Publishing the feed on GitHub Pages does not change that version requirement.
+**This is a DNS domain feed. Do not enforce this broad feed through a UniFi
+Domain-list firewall rule.** That rule resolves names to IP addresses and blocks
+those addresses, including unrelated sites on the same CDN. UniFi Network 11's
+External/Dynamic Network Lists support URL downloads, but this is not a URL
+subscription for the DNS Content Filter. The DNS Content Filter does not accept
+a blocklist URL in the inspected Network 11.0.99 UI. See the
+[UniFi integration guide's domain-filtering limitation](https://qfeeds.com/knowledge-base/unifi-setup/#malicious-domains).
 
-1. Open **Network Lists** in UniFi Settings and create a domain list named
-   `UniFi Additive Blocklist`.
-2. Select **Dynamic** as its source (called External Network Lists in the release
-   notes) and enter the HTTPS feed URL above. Set its refresh interval to 24 hours.
-3. Refresh the list and verify successful retrieval and the full domain count
-   against `build-report.json`. Capacity and refresh controls depend on the device
-   and firmware. Never truncate history silently to fit a capacity limit.
-4. Reference this list in a blocking policy for the intended client networks.
-   Merely creating the list does not enforce blocking. Keep the existing built-in
-   ad-block and content-filter settings in place.
-5. Verify blocking from a client in scope and verify an unrelated domain still
-   resolves. Check the external list's status after the next scheduled refresh.
+For URL-based, domain-specific blocking, add the feed URL to a DNS filter such as
+Pi-hole, AdGuard Home, or Technitium, verify the full imported count against
+`build-report.json`, and configure the intended clients/gateway to use that DNS
+filter. Keep the existing UniFi ad-block settings and requested allowlist entries.
+The resolver host and DNS routing must be selected before deploying that approach;
+this repository does not install a resolver or alter DNS routing automatically.
 
 Use the raw file URL, not this repository's HTML page. It serves plain UTF-8 text
 with one domain per line; no token, login, wildcard conversion, or file import is
-needed. UniFi polls the feed according to its configured refresh behavior; GitHub
-Actions maintains the feed daily. Do not paste the feed URL into a field that
-expects an individual blocked domain. This project uses URL subscriptions only
-for gateway delivery; it does not install a router-side script or substitute a
-one-time file import.
+needed. GitHub Actions maintains the feed daily; the subscribing DNS filter polls
+it on its configured schedule. Do not paste the feed URL into a field expecting
+an individual blocked domain. Delivery uses a URL subscription, not a router-side
+script or a one-time file import. Publishing on GitHub Pages would not change
+UniFi's enforcement semantics.
 
-### Why the External/URL option may be missing
+### UniFi version requirements
 
 On November 9, 2026, the target Dream Machine Beast reported OS 5.1.35 and Network
 10.6.109, with only the Official release channel available. It therefore needs a
@@ -72,19 +68,22 @@ compatible OS 6 upgrade before Network 11 can expose External Network Lists.
 Ubiquiti's Network 11 notes say the migration resets existing statistics history
 and may take up to 20 minutes. Back up the configuration and review the offered
 device-specific upgrade before proceeding. This repository does not upgrade the
-gateway automatically. No URL subscription is claimed active until its retrieval
-and blocking policy are verified on the gateway.
+gateway automatically. An OS/Network upgrade exposes Dynamic Network Lists but
+does not add DNS-level URL subscription support to Content Filter.
 
-### Configured separate blocker
+### Verified deployment status
 
 On November 9, 2026, UniFi Network 11.0.99 successfully loaded all 88,382 domains
 into the dynamic **UniFi Additive Blocklist** network list, with a 24-hour refresh
-interval. The separate **UniFi Additive Content Blocker** firewall policy references
-that domain list, blocks Default-network traffic from Internal to External,
-covers IPv4 and IPv6, and runs Always with flow logging enabled. Find the list in
-**Settings → Networks → Network Lists**, and its enforcement rule in
-**Settings → Policy Engine → Policy Table**. The native subscription is enforced
-through that separate policy, not a pasted static Content Filter blocklist.
+interval. The separate **UniFi Additive Content Blocker** firewall policy was
+created and tested, then **paused** after its flow logs showed it blocking
+`ui.com`, `example.com`, and `idm.xfinity.com`, even though none of these names or
+their parents is in the feed. `ui.com` and `example.com` returned HTTP 200 after
+the rule was paused. Do not resume it as a general DNS ad blocker.
+
+The downloaded list remains under **Settings → Networks → Network Lists**. The
+paused policy remains under **Settings → Policy Engine → Policy Table** for
+inspection. The supplemental feed is not currently enforced by a DNS filter.
 
 The original **AD Blocking Filter** remains in place, including the CookieLaw and
 OneTrust allowlist entries. The two exception domains and their parents are absent
