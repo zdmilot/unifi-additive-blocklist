@@ -13288,6 +13288,7 @@
 ||ads.huabango.com^
 ||ads.huan.tv^
 ||ads.huantest.com^
+||ads.huawei.com^
 ||ads.huginmedia.dk^
 ||ads.hun.is^
 ||ads.hunttrck.com^
@@ -13519,6 +13520,7 @@
 ||ads.mgrealm.com^
 ||ads.miarroba.com^
 ||ads.mic.com^
+||ads.microsoft.com^
 ||ads.midatlantic.aaa.com^
 ||ads.milfcoach.com^
 ||ads.milfinmybed.com^
@@ -14125,6 +14127,7 @@
 ||ads.wuazu.net^
 ||ads.wwe-media.de^
 ||ads.wwe.biz^
+||ads.x.com^
 ||ads.x5.ru^
 ||ads.xedoisong.vn^
 ||ads.xemphimso.com^
@@ -27866,9 +27869,11 @@
 ||api.net.idealo-partner.com^
 ||api.newad.ifeng.com^
 ||api.ning.com^
+||api.onesignal.com^
 ||api.ootoo.co.kr^
 ||api.optimizely.com^
 ||api.parse.com^
+||api.partnerstack.com^
 ||api.pawns.app^
 ||api.peer2profit.global^
 ||api.pingstart.com^
@@ -28618,6 +28623,7 @@
 ||app.portland5.com^
 ||app.portlandpilots.com^
 ||app.post.vertafore.com^
+||app.posthog.com^
 ||app.ppacri.org^
 ||app.pplcenter.com^
 ||app.prettyinsights.com^
@@ -28741,6 +28747,7 @@
 ||app.usajaguars.com^
 ||app.usctrojans.com^
 ||app.usdtoreros.com^
+||app.usercentrics.eu^
 ||app.usnh.edu^
 ||app.utahstateaggies.com^
 ||app.utahtechtickets.com^
@@ -37479,6 +37486,7 @@
 ||bnbmatrix.io^
 ||bnbn.jp^
 ||bnc-whatsapp.com^
+||bnc.lt^
 ||bnc6d.xyz^
 ||bnchncecat.web.app^
 ||bncloudfl.com^
@@ -42910,6 +42918,7 @@
 ||cdn.popcash.net^
 ||cdn.powerinboxedge.com^
 ||cdn.prdn.nl^
+||cdn.privacy-mgmt.com^
 ||cdn.prod.adskit.juno.alexa.amazon.dev^
 ||cdn.prod.euid.eu^
 ||cdn.provesrc.com^
@@ -45252,6 +45261,8 @@
 ||click.hooligapps.com^
 ||click.kataweb.it^
 ||click.lenovo.com^
+||click.linksynergy.com^
+||click.mailchimp.com^
 ||click.mmotoplay.com^
 ||click.okmagic.top^
 ||click.oneplus.cn^
@@ -45561,6 +45572,7 @@
 ||clientsorgnet.netlify.app^
 ||clientstaticserv.com^
 ||clientstats.ntconseil.com^
+||clientstream.launchdarkly.com^
 ||clientsvogie.com^
 ||clifads.com^
 ||clifbarosterreich.at^
@@ -46026,11 +46038,13 @@
 ||cmp-mason-stag-ext-com.net.mydays.de^
 ||cmp.audifinance.be^
 ||cmp.dieterencenters.be^
+||cmp.inmobi.com^
 ||cmp.mamobilitezen.be^
 ||cmp.mespneusete.be^
 ||cmp.mijnzenmobiliteit.be^
 ||cmp.mijnzomerbanden.be^
 ||cmp.myvolkswagen.be^
+||cmp.osano.com^
 ||cmp.seatfinance.be^
 ||cmpgmst.shop^
 ||cmpgns.net^
@@ -47764,6 +47778,7 @@
 ||connect.dimensiondata.com^
 ||connect.eamc.org^
 ||connect.evocalize.com^
+||connect.facebook.net^
 ||connect.frontier.com^
 ||connect.groupamana.com^
 ||connect.health.bjc.org^
@@ -47881,12 +47896,15 @@
 ||consels-hetzner.com^
 ||consensad.com^
 ||consensusarticles.com^
+||consent.cookiebot.com^
 ||consent.easybrain.com^
 ||consent.lexpress.fr^
 ||consent.marketing.boostmobile.com^
 ||consent.marketing.dish.com^
 ||consent.marketing.sling.com^
 ||consent.mktg.venetianlasvegas.com^
+||consent.trustarc.com^
+||consentcdn.cookiebot.com^
 ||consentrecruit.com^
 ||consequencerelic.com^
 ||consequencesjudged.com^
@@ -48290,6 +48308,7 @@
 ||cookie.sync.usonar.jp^
 ||cookieapi-whatsapp.com^
 ||cookiebar.ideasoft.dev^
+||cookiebot.com^
 ||cookiecdn-whatsapp.com^
 ||cookiejar.atea.no^
 ||cookieless-data.com^
@@ -50772,6 +50791,7 @@
 ||customer.fra-01.braze.eu^
 ||customer.guru^
 ||customer.iad-03.braze.com^
+||customer.io^
 ||customerablative.com^
 ||customercare.aircycle.com^
 ||customerevents.dradis.netflix.com^
@@ -53308,6 +53328,7 @@
 ||dahomeyrooed.cfd^
 ||dahracppb.com^
 ||dahrexmj.icu^
+||dai.google.com^
 ||dai.siyuetian.net^
 ||dai18.mumu01.com^
 ||daib.pl^
@@ -66837,6 +66858,7 @@
 ||eu.ironmountain.com^
 ||eu.kinggroup.buzz^
 ||eu.nr-data.net^
+||eu.posthog.com^
 ||eu.sgtm.space^
 ||eu.stanlyss1913.com^
 ||eu.viatrisconnect.com^
@@ -67434,6 +67456,7 @@
 ||events.julephosting.de^
 ||events.kangan.edu.au^
 ||events.la-z-boy.com^
+||events.launchdarkly.com^
 ||events.lbesecapi.com^
 ||events.lexmark.com^
 ||events.limango.com^
@@ -71019,6 +71042,7 @@
 ||fireads.org^
 ||fireanalytics.firestream.to^
 ||fireballbristleproper.com^
+||firebase-settings.crashlytics.com^
 ||firecatfilms.com^
 ||firecode.fun^
 ||firedragonpizza.ca^
@@ -79084,6 +79108,8 @@
 ||grapevinecounselingandtherapy.com^
 ||grapewinesales.com^
 ||graph-9-1.net.mydays.de^
+||graph.facebook.com^
+||graph.instagram.com^
 ||graph0-8-0.net.mydays.de^
 ||graph1-01.net.mydays.de^
 ||graph2-6-2.net.mydays.de^
@@ -85958,6 +85984,7 @@
 ||i.gdt.qq.com^
 ||i.idio.co^
 ||i.inspi-dsp.com^
+||i.instagram.com^
 ||i.isnssdk.com.edgekey.net^
 ||i.j2j.ru^
 ||i.justblinds.com^
@@ -100176,6 +100203,7 @@
 ||lifthe.com^
 ||liftinginfluxflax.com^
 ||liftique.de^
+||liftoff.io^
 ||liftr.eu^
 ||liftsspinals.qpon^
 ||liftyad.xyz^
@@ -116088,6 +116116,7 @@
 ||minerad.com^
 ||mineralsglobal.com^
 ||mineralsolutions.de^
+||mineralt.io^
 ||minercircle.com^
 ||minergate.com^
 ||minero.cc^
@@ -118748,6 +118777,7 @@
 ||mssdk5-normal-lf.zijieapi.com^
 ||mssdk5-normal-lq.zijieapi.com^
 ||mssdk5-normal.zijieapi.com^
+||mssl.fwmrm.net^
 ||mssql-bime-andrewf-uxr3accoon.net.mydays.de^
 ||msstorageazure.com^
 ||msstorageboxes.com^
@@ -122055,6 +122085,7 @@
 ||ngfhkglghgdjliwgh.online^
 ||ngfkrduait.com^
 ||ngfruitiesmatc.info^
+||ngfts.lge.com^
 ||nghivugi92.com^
 ||nghnbogvkojlk.space^
 ||ngicwqnazmecv.online^
@@ -124495,6 +124526,7 @@
 ||o.send.now^
 ||o.slacker.com^
 ||o.swisscom.ch^
+||o0.ingest.sentry.io^
 ||o000oo.com^
 ||o03fssif8l.com^
 ||o0ctbz-attr.appsflyersdk.com^
@@ -130153,6 +130185,7 @@
 ||pangle-b.io^
 ||pangle.io^
 ||pangle.io.edgekey.net^
+||pangleglobal.com^
 ||pangolin-sdk-toutiao-b.com^
 ||pangolin-sdk-toutiao.com^
 ||pangolin-sdk-toutiao1.com^
@@ -130934,6 +130967,7 @@
 ||partnership.evolenthealth.com^
 ||partnership75.com^
 ||partnerssl.googleadservices.com^
+||partnerstack.com^
 ||partnersuccess.cisco.com^
 ||partnersuccessmetrics.cisco.com^
 ||partnerwith.us.streetbond.com^
@@ -137558,6 +137592,7 @@
 ||privacyfriendly.netlify.app^
 ||privacykum.net^
 ||privacymps.merchantprocessorsolutions.com^
+||privacyportal.onetrust.com^
 ||privacyprotector.com^
 ||privacysandbox.googleadservices.com^
 ||privacysearching.com^
@@ -139098,6 +139133,7 @@
 ||publpush.com^
 ||pubmatic-match.dotomi.com^
 ||pubmatic.bbvms.com^
+||pubmatic.com^
 ||pubmatic.edgekey.net^
 ||pubmine.com^
 ||pubmonetize.io^
@@ -143437,6 +143473,7 @@
 ||redirect-workspace.com^
 ||redirect.pandora.xiaomi.com^
 ||redirect.simba.taobao.com^
+||redirect.viglink.com^
 ||redirect236.com^
 ||redirect388herosafest.com^
 ||redirectbandarxlsafest.com^
@@ -143447,6 +143484,8 @@
 ||redirection-page-rt20.bolt.host^
 ||redirectionred33445.blogspot.gr^
 ||redirectionurl.de^
+||redirector.googlevideo.com^
+||redirector.skimresources.com^
 ||redirectott.com^
 ||redirects.us^
 ||redirectsnew.click^
@@ -143564,6 +143603,7 @@
 ||referralhero.com^
 ||referralware.com^
 ||referredrender.com^
+||refersion.com^
 ||referwhen.com^
 ||reffedseck.com^
 ||reffingswelp.qpon^
@@ -146782,6 +146822,7 @@
 ||rs.adocean.pl^
 ||rs.adpinfo.com^
 ||rs.breathyluggies.cfd^
+||rs.fullstory.com^
 ||rs.mail.ru^
 ||rs.sinajs.cn^
 ||rs.smc.tf^
@@ -147282,6 +147323,7 @@
 ||rudbpghbbucqg.online^
 ||rudder-server-prd.arena.im^
 ||rudder-tracking.rudderstack.com^
+||rudderstack.com^
 ||rudderwebmy.com^
 ||ruddishwakon.com^
 ||ruddsiolite.com^
@@ -147388,6 +147430,7 @@
 ||rum.azion.com^
 ||rum.azioncdn.net^
 ||rum.battle.net^
+||rum.browser-intake-datadoghq.com^
 ||rum.ca-central-1.amazonaws.com^
 ||rum.catchmetrics.io^
 ||rum.cdnpure.com^
@@ -148282,6 +148325,7 @@
 ||s.xtds1.com^
 ||s.xtds3.com^
 ||s.yorkregion.com^
+||s.youtube.com^
 ||s.zixuntop.com^
 ||s.zline0.com^
 ||s.zline3.com^
@@ -150788,6 +150832,7 @@
 ||sdk.mrf.io^
 ||sdk.optimove.net^
 ||sdk.postscript.io^
+||sdk.privacy-center.org^
 ||sdk.ptqy.gitv.tv^
 ||sdk.pulse.schibsted.com^
 ||sdk.resu.io^
@@ -156686,6 +156731,7 @@
 ||sift.co^
 ||sift.co.uk^
 ||siftoctaveuntimed.qpon^
+||siftscience.com^
 ||sig.ig.com^
 ||sigghub.com^
 ||siggrouplink.com^
@@ -165866,6 +165912,7 @@
 ||ssl.o.vitals.com^
 ||ssl.o.webmdrx.com^
 ||ssl.o.youembody.com^
+||ssl.p.jwpcdn.com^
 ||ssl.sc.amc.devk.de^
 ||ssl.sciencechannel.com^
 ||ssl.searchautoparts.com^
@@ -173845,6 +173892,7 @@
 ||t.pbr.com^
 ||t.pennathletics.com^
 ||t.pepperdinewaves.com^
+||t.pepperjamnetwork.com^
 ||t.perigold.com^
 ||t.pie.org^
 ||t.pittsburghpanthers.com^
@@ -174456,6 +174504,7 @@
 ||tagmanager.andata.ru^
 ||tagmanager.cn^
 ||tagmanager.doppelherz.de^
+||tagmanager.google.com^
 ||tagmanager.jameslane.com.au^
 ||tagmanager.malteser.de^
 ||tagmanager.meh.com^
@@ -189307,6 +189356,7 @@
 ||us.api.micloud.xiaomi.net^
 ||us.healy.shop^
 ||us.hl.cn^
+||us.i.posthog.com^
 ||us.js2.yimg.com^
 ||us.l.qq.com^
 ||us.mplis.gov.vn^
@@ -193413,6 +193463,7 @@
 ||vortax.app^
 ||vortex-comger.com^
 ||vortex-dual.hulu.com^
+||vortex.data.microsoft.com^
 ||vortex.hulu.com^
 ||vortex.hulu.com.akadns.net^
 ||vortexashop.net^
@@ -197376,6 +197427,7 @@
 ||widget.info-app5shs.ru^
 ||widget.info-static.ru^
 ||widget.insapp.ru^
+||widget.intercom.io^
 ||widget.justwatch.com^
 ||widget.kyna.vn^
 ||widget.manychat.com^
@@ -197417,6 +197469,7 @@
 ||widgets.lendingtree.com^
 ||widgets.oddschecker.com^
 ||widgets.outbrain.com^
+||widgets.pinterest.com^
 ||widgets.planeta.ru^
 ||widgets.progrids.com^
 ||widgets.recruitology.com^
@@ -199634,6 +199687,7 @@
 ||www.auberge-lorraine-levaltin.fr^
 ||www.auqp.com^
 ||www.autohotkey.top.pages.dnsoe4.com^
+||www.awin1.com^
 ||www.axswhgkytfd.com^
 ||www.azureus.es^
 ||www.badwtokg.com^
@@ -201896,6 +201950,7 @@
 ||xoydvcfiseclm.space^
 ||xoykxivejo.com^
 ||xoymkdgsafcdh.site^
+||xp.apple.com^
 ||xp2023-pix.s3.amazonaws.com^
 ||xp308.cn^
 ||xp39.vip^
@@ -205496,6 +205551,7 @@
 ||zen-test.yandex.ru^
 ||zen-walk.de^
 ||zen0935.com^
+||zenaps.com^
 ||zencudo.co.uk^
 ||zendesk-integration.net.mydays.de^
 ||zendigui.co.uk^

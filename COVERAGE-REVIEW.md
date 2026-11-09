@@ -18,6 +18,15 @@ below were promoted into `manual-additions.txt` and both generated main feeds,
 bringing the total to **207,316** with zero removals. The other four failed checks
 are browser-side cosmetic/script tests and cannot be represented as DNS domains.
 
+A subsequent Chrome run of Super Adblock Test showed 59 reachable checks. The
+user requested those missing names be added through GitHub as well. Another 56
+exact hostnames were added, bringing the main feeds to **207,372**. These include
+consent interfaces, feature flags, support/chat systems, affiliate routing,
+social application APIs, and video routing as explicitly requested; they are not
+all exclusively ad delivery. The protected `cdn.cookielaw.org` and `udc.yahoo.com`
+exceptions remain excluded. `vk.com/rtrg` is a URL path and was not converted into
+a network-wide block on the whole `vk.com` hostname.
+
 ## What was checked
 
 Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its
