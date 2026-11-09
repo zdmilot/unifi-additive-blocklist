@@ -55,6 +55,22 @@ cdn2-inner-active.map.fastly.net
 # Vendor context: https://algogear.com/
 ali-vg-track.algogear.com
 
+# Live ad-delivery gaps and their service-specific aliases, 2026-11-09.
+# SKMADS vendor context: https://skmads.com/privacy-and-policy/
+skmads.com
+cdn.skmads.com
+rtb-us.skmads.com
+newplayable.mintegral.com
+assets.mintegral.com
+d1gfm4vyw05q9l.cloudfront.net
+d2alqfnha55k8f.cloudfront.net
+# PubMatic's current public DNS alias chains; edgekey name already historical.
+pubmatic.edgekey.net
+pubmnet.com
+image8-v2.pubmnet.com
+imgsync-nje.pubmnet.com
+ssptrackerv1.pubmnet.com
+
 # User-requested Bally Bet site block: intentional gambling-site restriction.
 # The Adblock output covers the root and every subdomain, including play.
 ballybet.com

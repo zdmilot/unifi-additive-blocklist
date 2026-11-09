@@ -104,6 +104,23 @@ out preloaded content, existing connections, cellular traffic, or alternative
 DNS. A third-party ad label is insufficient evidence to block ordinary Google,
 Apple, or application content services.
 
+A subsequent controlled test exposed successful requests to SKMADS's
+`cdn.skmads.com` and `rtb-us.skmads.com`, and Mintegral's
+`newplayable.mintegral.com` and `assets.mintegral.com`. These names, the SKMADS
+parent, two Mintegral-specific CloudFront distributions confirmed through public
+DNS, and PubMatic's `pubmnet.com` delivery/measurement aliases were recorded in
+manual inputs. Eleven names were new; `pubmatic.edgekey.net` was already in
+history. The feeds now contain **207,496** domains. Shared CDN parents and generic
+Akamai routing hostnames were not added.
+
+The packet review also caught a real DNS answer for an already-listed AppLovin
+hostname immediately before UniFi restarted its DNS filter during provisioning.
+This is evidence of a transient enforcement gap around a native reload, rather
+than proof that the hostname was missing from the feed. Later queries returned
+blocking answers. Applications can retain the earlier address or downloaded
+creative after enforcement resumes. Test after native DNS enforcement has settled;
+API read-back alone does not prove instantaneous enforcement or clear client caches.
+
 ## What was checked
 
 Compared the existing feed, four HaGeZi tiers, AdGuard DNS and its

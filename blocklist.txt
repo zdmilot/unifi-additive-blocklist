@@ -30304,6 +30304,7 @@ assets.heylink.com
 assets.iterable.com
 assets.kampyle.com
 assets.kochava.com
+assets.mintegral.com
 assets.newsmaxwidget.com
 assets.oupe.es
 assets.privy.com
@@ -42981,6 +42982,7 @@ cdn.seonintelligence.com
 cdn.shareaholic.net
 cdn.signalfx.com
 cdn.sitorix.com
+cdn.skmads.com
 cdn.slots.baxter.olx.org
 cdn.smachnakittchen.com
 cdn.smartclick.io
@@ -51741,6 +51743,7 @@ d1g4493j0tcwvt.cloudfront.net
 d1g4xgvlcsj49g.cloudfront.net
 d1g8forfjnu2jh.cloudfront.net
 d1get58iwmjrxx.cloudfront.net
+d1gfm4vyw05q9l.cloudfront.net
 d1gof7ug63b1q4.cloudfront.net
 d1gofkrkum4ehe.cloudfront.net
 d1gp8joe0evc8s.cloudfront.net
@@ -52192,6 +52195,7 @@ d2a80scaiwzqau.cloudfront.net
 d2a945og79nayl.cloudfront.net
 d2a99ncvgwfx20.cloudfront.net
 d2allek1za3zyr.cloudfront.net
+d2alqfnha55k8f.cloudfront.net
 d2au4l2o128joe.cloudfront.net
 d2axb.plainviews.life
 d2b12e9gh7m9il.cloudfront.net
@@ -87478,6 +87482,7 @@ image2.pubmatic.com
 image3.pubmatic.com
 image4.pubmatic.com
 image6.pubmatic.com
+image8-v2.pubmnet.com
 image8.pubmatic.com
 imageads.canoe.ca
 imageadvantage.net
@@ -87699,6 +87704,7 @@ imgsdy8iyf8723y97g.top
 imgsize.ph.126.net
 imgsniper.com
 imgstat.baidu.com
+imgsync-nje.pubmnet.com
 imgsynd.com
 imgui.org
 imgx.jampp.com
@@ -121772,6 +121778,7 @@ newosama.com
 newosnotadprx.space
 newpartnerlover.com
 newpipe.app
+newplayable.mintegral.com
 newpornmovs.com
 newport.com.102.122.2o7.net
 newpowerads.com
@@ -139222,6 +139229,7 @@ pubmatic.bbvms.com
 pubmatic.com
 pubmatic.edgekey.net
 pubmine.com
+pubmnet.com
 pubmonetize.io
 pubnation.com
 pubnative.info
@@ -147052,6 +147060,7 @@ rtb-tracking.pontiac.media
 rtb-trk4.linkedin.com
 rtb-us-east.linkedin.com
 rtb-us-west.linkedin.com
+rtb-us.skmads.com
 rtb-uswest-v4.strongmetrics.io
 rtb-uswest.strongmetrics.io
 rtb.adxsenmeng.com
@@ -157687,6 +157696,7 @@ sklerep.shop
 sklivunjpqwmn.com
 sklstech.com
 skmac811.com
+skmads.com
 skmfcfzuyovss.website
 skniymvvknmxx.space
 skoaledgalanas.cfd
@@ -166096,6 +166106,7 @@ sspapi.admicro.vn
 sspjlwrhunhoo.space
 sspnm.emol.com
 ssppsciomwffd.website
+ssptrackerv1.pubmnet.com
 sspxhnhaigrdb.site
 sspzvqhsqywbq.site
 ssqcqaavrncxt.online
