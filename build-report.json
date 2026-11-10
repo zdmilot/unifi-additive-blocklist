@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-09T07:33:50.625015+00:00",
-  "previous": 207485,
-  "added": 11,
+  "generated_at": "2026-11-10T07:21:59.518416+00:00",
+  "previous": 207496,
+  "added": 3798,
   "removed": 0,
-  "total": 207496,
-  "sha256": "50cde844540616d72cbc75970534fd97d05fa5acc4df1ae1158c32d5afb04a82",
+  "total": 211294,
+  "sha256": "c27b0f0ac5d96d82bee7486cc8c0774f03b4ba5eca926e4cb74efa1807cf6a9d",
   "sources": [
     {
       "name": "HaGeZi Multi NORMAL",
       "location": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/multi-onlydomains.txt",
       "license": "GPL-3.0",
-      "domains": 206744,
-      "sha256": "b4142a8f9cc81ad77ebe7d765f1a9f10fe3f409bb85d23c60d395cf7b686e77d"
+      "domains": 206820,
+      "sha256": "249865d165115630cdd625a6b99cea168206d742ebfe8aa659606ff34d325185"
     }
   ],
-  "adblock_sha256": "4eded99d862ade87f7d0238aecdcbdc1bf715ed1b7b9247ca2350159e168834c"
+  "adblock_sha256": "77e959610d8fad680da585076dab47e50a3e13c9d89ad3185554f998d38108b3"
 }
